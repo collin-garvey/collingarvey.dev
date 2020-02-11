@@ -1,5 +1,3 @@
-function HomePage() {
-  return <div>Collin Garvey</div>;
-}
+const Home = () => <h1>Collin Garvey</h1>;
 
-export default HomePage;
+export default Home;
