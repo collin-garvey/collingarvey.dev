@@ -1,0 +1,19 @@
+{
+  "name": "personal-2020",
+  "version": "1.0.0",
+  "description": "Collin Garvey personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collin-garvey/personal-2020.git"
+  },
+  "author": "Collin Garvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/collin-garvey/personal-2020/issues"
+  },
+  "homepage": "https://github.com/collin-garvey/personal-2020#readme"
+}
