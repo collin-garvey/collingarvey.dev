@@ -10,9 +10,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|mdx|graphql)\"",
     "format": "npm run prettier -- --write",
-    "lint": "eslint src",
-    "validate": "npm run lint && npm run prettier -- --list-different",
-    "precommit": "npm run validate"
+    "lint": "eslint",
+    "validate": "npm run lint && npm run prettier -- --list-different"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
   },
   "repository": {
     "type": "git",
