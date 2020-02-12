@@ -9,6 +9,26 @@
 
 body {
   margin: 0;
+  font-family: 'nb_international_prolight', Arial, Helvetica, sans-serif;
   background: var(--bg-black);
   color: var(--text-primary);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #666666;
+}
+
+p {
+  font-family: 'nb_international_probook';
+  font-size: 1rem;
+  line-height: 1.36;
 }
