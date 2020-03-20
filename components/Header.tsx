@@ -10,10 +10,8 @@ const Header: React.FC = () => {
       </Head>
       <div className="container container--grid">
         <div className="container__row">
-          <h1>
-            Collin <small>Hale</small> Garvey
-          </h1>
-          <h2>Web Developer</h2>
+          <h1>Collin Garvey</h1>
+          <h2>Front-end Engineer</h2>
           <nav>
             <Link href="/">
               <a>Blog</a>
