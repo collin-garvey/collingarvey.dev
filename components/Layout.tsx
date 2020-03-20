@@ -4,9 +4,7 @@ const Layout: React.FC = props => {
   return (
     <>
       <Header />
-      <main className="container container--grid">
-        <div className="container__row">{props.children}</div>
-      </main>
+      <main>{props.children}</main>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import '../css/styles.css';
+import '../styles/main.scss';
 
 const MyApp = ({Component, pageProps, router}) => {
   return <Component {...pageProps} key={router.route} />;

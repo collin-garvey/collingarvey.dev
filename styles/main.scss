@@ -1,0 +1,81 @@
+$bg-black: #1c1c1c;
+$text-body: #eeeeee;
+$text-heading: #ffffff;
+$break-sm: 420px;
+$break-md: 768px;
+$break-lg: 1024px;
+$break-xl: 1280px;
+$font-headline: 'Alegreya Sans', serif;
+$font-body: 'Alegreya', sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  background: $bg-black;
+  color: $text-body;
+}
+
+h1,
+h2,
+h3 {
+  color: $text-heading;
+  font-family: $font-headline;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: $text-heading;
+}
+
+p {
+  line-height: 1.36;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container$grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.container$grid .container__row {
+  grid-column: 1/-1;
+}
+
+@media screen and (min-width: $break-md) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .container$grid {
+    grid-template-columns: repeat(24, 1fr);
+  }
+
+  .container$grid .container__row {
+    grid-column: 2/-2;
+  }
+}
+
+.section$light {
+  background: #cccccc;
+  color: black;
+}

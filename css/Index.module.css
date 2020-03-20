@@ -1,7 +1,0 @@
-.intro {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(100px, 1fr);
-  column-gap: 2rem;
-  border: 1px dashed red;
-}
