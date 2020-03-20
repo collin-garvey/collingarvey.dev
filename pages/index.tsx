@@ -1,27 +1,28 @@
-import styles from './Index.module.css';
-import Head from 'next/head';
+import styles from './../css/Index.module.css';
+import Layout from './../components/Layout';
 
-const Home = () => {
+const Index: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Collin Garvey</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <div className={styles.intro}>
-        <h1>
-          Collin <small>Hale</small> Garvey
-        </h1>
-        <h2>Placeholder text</h2>
-
-        <ul>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Just a link to click</li>
-        </ul>
-      </div>
-    </>
+    <Layout>
+      <ul className={styles.intro}>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam numquam
+          quidem itaque, omnis possimus ab rerum sit doloremque et reiciendis!
+          Ducimus, est! Animi mollitia deleniti ipsa quod, quidem vero pariatur!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam numquam
+          quidem itaque, omnis possimus ab rerum sit doloremque et reiciendis!
+          Ducimus, est! Animi mollitia deleniti ipsa quod, quidem vero pariatur!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam numquam
+          quidem itaque, omnis possimus ab rerum sit doloremque et reiciendis!
+          Ducimus, est! Animi mollitia deleniti ipsa quod, quidem vero pariatur!
+        </p>
+      </ul>
+    </Layout>
   );
 };
 
-export default Home;
+export default Index;
