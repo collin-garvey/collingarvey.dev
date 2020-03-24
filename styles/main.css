@@ -1,0 +1,100 @@
+:root {
+  --background: #fff6ef;
+  --accent: #ff4700;
+  --accent2: #169b62;
+  --break-sm: 420px;
+  --break-md: 768px;
+  --break-lg: 1024px;
+  --break-xl: 1280px;
+  --font-headline: 'Inknut Antiqua', serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--accent);
+  height: 100vh;
+  background: linear-gradient(var(--background), #ffffff);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--accent);
+  font-family: var(--font-headline);
+  margin: 1rem 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+p {
+  line-height: 1.36;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container--grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.container--grid .container__row {
+  grid-column: 1/-1;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .container--grid {
+    grid-template-columns: repeat(24, 1fr);
+  }
+
+  .container--grid .container__row {
+    grid-column: 2/-2;
+  }
+}
+
+a,
+a[href] {
+  color: var(--accent2);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 200ms ease-out;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.section--light {
+  background: #ffffff;
+  color: var(--background);
+  padding: 3rem 0;
+}

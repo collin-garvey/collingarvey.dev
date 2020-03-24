@@ -1,0 +1,34 @@
+.Header {
+  padding: 2rem 0;
+}
+
+.headshot {
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  width: 75px;
+  height: 75px;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+}
+
+.masthead > div {
+  margin: 0 0 0 1rem;
+}
+
+.nav {
+  margin: 0 0 0 auto;
+}
+
+.nav a {
+  margin: 0 0.3rem;
+  padding: 0.3rem;
+}
+
+.nav a:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
