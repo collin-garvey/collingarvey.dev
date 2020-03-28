@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Head from 'next/head';
 import Grid from './Grid';
+import Navigation from './Navigation';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
@@ -26,17 +26,7 @@ const Header: React.FC = () => {
               <h1>Collin Garvey</h1>
               <span>Full-Stack Engineer</span>
             </div>
-            <nav className={styles.nav}>
-              <Link href="/">
-                <a>Blog</a>
-              </Link>
-              <Link href="/">
-                <a>Work</a>
-              </Link>
-              <Link href="/about">
-                <a>Contact</a>
-              </Link>
-            </nav>
+            <Navigation />
           </div>
         </Grid>
       </header>
