@@ -5,3 +5,8 @@
   font-size: 3rem;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

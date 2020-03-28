@@ -1,0 +1,26 @@
+.projectCard {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.aspectContainer {
+  height: 0;
+  overflow: hidden;
+  padding-top: calc(9 / 16 * 100%); /* 16:9 */
+  position: relative;
+}
+
+.aspectContainer__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1, 1);
+  transform-origin: center center;
+  transition: all 0.2s ease-in-out;
+}
+
+.aspectContainer__inner:hover {
+  transform: scale(1.05, 1.05);
+}

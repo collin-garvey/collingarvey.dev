@@ -1,0 +1,45 @@
+.gridContainer {
+  min-width: 300px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.one,
+.two,
+.three,
+.six {
+  grid-column: span 6;
+}
+
+@media screen and (min-width: 768px) {
+  .span-full {
+    grid-column: span 24;
+  }
+
+  .grid {
+    grid-template-columns: repeat(24, 1fr);
+  }
+
+  .one {
+    grid-column: span 24;
+  }
+
+  .two {
+    grid-column: span 12;
+  }
+
+  .three {
+    grid-column: span 8;
+  }
+
+  .six {
+    grid-column: span 4;
+  }
+}
