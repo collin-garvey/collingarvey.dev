@@ -1,19 +1,17 @@
-import Layout from './../components/Layout';
 import Project from '../components/ProjectCard';
 import Grid from '../components/Grid';
-
 import styles from './../styles/Index.module.css';
 
 const Index: React.FC = () => {
   return (
-    <Layout>
+    <>
       <section className={styles.hero}>
         <Grid columns={1}>
           <h2>It's just websites</h2>
         </Grid>
       </section>
       <section className="section--light">
-        <Grid columns={3}>
+        <Grid columns={2}>
           <Project
             url="https://facebook.com/"
             title="Facebook Connectivity App"
@@ -29,7 +27,7 @@ const Index: React.FC = () => {
           />
         </Grid>
       </section>
-    </Layout>
+    </>
   );
 };
 

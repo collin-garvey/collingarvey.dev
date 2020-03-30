@@ -2,6 +2,8 @@
 /// <reference types="next/types/global" />
 
 declare module '@zeit/next-sass';
+declare module 'remark';
+declare module 'remark-html';
 
 declare module '*.css' {
   const content: {[className: string]: string};

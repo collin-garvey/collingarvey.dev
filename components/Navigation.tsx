@@ -6,7 +6,7 @@ import styles from './Navigation.module.css';
 const Navigation: React.FC = () => {
   return (
     <nav className={styles.nav}>
-      <Link href="/">
+      <Link href="/blog">
         <a>Blog</a>
       </Link>
       <Link href="/">
