@@ -1,9 +1,10 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Grid from './Grid';
 import Navigation from './Navigation';
 import styles from './Header.module.css';
 
-const Header: React.FC = () => {
+const Header: React.SFC = () => {
   return (
     <>
       <Head>
@@ -16,18 +17,17 @@ const Header: React.FC = () => {
       </Head>
       <header className={styles.Header}>
         <Grid columns={1}>
-          <div className={styles.masthead}>
-            <img
-              className={styles.headshot}
-              src="/static/images/headshot.jpg"
-              alt="Photo of Collin Garvey looking sexy AF"
-            />
-            <div>
-              <h1>Collin Garvey</h1>
-              <span>Full-Stack Engineer</span>
+          <Link href="/">
+            <div className={styles.masthead}>
+              <img
+                className={styles.headshot}
+                src="/static/images/headshot.jpg"
+                alt="Colliente"
+              />
+
+              <Navigation />
             </div>
-            <Navigation />
-          </div>
+          </Link>
         </Grid>
       </header>
     </>

@@ -2,7 +2,7 @@
   min-width: 300px;
   max-width: 1480px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .grid {
@@ -19,6 +19,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .gridContainer {
+    padding: 0 4rem;
+  }
   .span-full {
     grid-column: span 24;
   }

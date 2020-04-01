@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Footer.module.css';
 
-const Footer: React.FC = () => {
+const Footer: React.SFC = () => {
   const date = new Date();
   return (
     <footer className={styles.footer}>
-      <p>Thanks for visiting!</p>
+      <p>👋 Thanks for visiting!</p>
       <p>
         Catch me outside
         <br />
@@ -15,7 +15,9 @@ const Footer: React.FC = () => {
         {' • '}
         <a href="https://www.linkedin.com/in/collingarvey/">LinkedIn</a>
       </p>
-      <p>&copy; {date.getFullYear()} Collin Garvey</p>
+      <p>
+        &copy; {date.getFullYear()} Collin Garvey{' • '}All rights reserved.
+      </p>
     </footer>
   );
 };

@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--accent);
+  color: var(--accent2);
   height: 100vh;
   background: var(--background);
 }
@@ -44,7 +44,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--accent2);
 }
 
 p {
@@ -53,7 +53,7 @@ p {
 
 a,
 a[href] {
-  color: var(--accent2);
+  color: var(--accent);
   text-decoration: none;
   transition: color 200ms ease-out;
 }
@@ -62,17 +62,28 @@ a:hover {
   color: var(--accent);
 }
 
+p a[href],
+h1 a[href],
+h2 a[href] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 2px;
+  transition: all 0.1s ease-out;
+  text-decoration-color: rgba(0, 255, 0, 0.5);
+}
+
 .page-transition-enter {
   opacity: 0;
 }
 .page-transition-enter-active {
   opacity: 1;
-  transition: opacity 300ms;
+  transition: opacity 150ms;
 }
 .page-transition-exit {
   opacity: 1;
 }
 .page-transition-exit-active {
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 50ms;
 }

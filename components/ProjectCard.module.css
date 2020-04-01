@@ -24,3 +24,21 @@
 .aspectContainer__inner:hover {
   transform: scale(1.05, 1.05);
 }
+
+.aspectContainer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 100ms ease;
+  z-index: 2;
+}
+
+.aspectContainer:hover::before {
+  opacity: 0;
+}

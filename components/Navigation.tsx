@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import styles from './Navigation.module.css';
 
-const Navigation: React.FC = () => {
+const Navigation: React.SFC = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/blog">
@@ -13,7 +13,7 @@ const Navigation: React.FC = () => {
         <a>Work</a>
       </Link>
       <Link href="/about">
-        <a>Contact</a>
+        <a>About</a>
       </Link>
     </nav>
   );

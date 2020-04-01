@@ -8,7 +8,7 @@ interface IProjectProps {
   title: string;
 }
 
-const Project: React.FC<IProjectProps> = props => {
+const Project: React.SFC<IProjectProps> = props => {
   return (
     <div className={styles.projectCard}>
       <a href={props.url}>

@@ -32,7 +32,7 @@ function renderChildren(children, columns) {
   return null;
 }
 
-const Grid: React.FC<IGridProps> = props => {
+const Grid: React.SFC<IGridProps> = props => {
   return (
     <div className={cx(styles.gridContainer, styles.grid)}>
       {renderChildren(props.children, props.columns)}

@@ -1,11 +1,34 @@
 .hero {
-  padding: 6rem 0;
+  display: flex;
+  place-items: center;
+  padding: 2rem 0;
 }
 .hero h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: clamp(1, 1.2, 1.5);
   text-align: center;
 }
+
+.heroContent {
+  width: clamp(300px, 800px, 80vw);
+}
+
+.intro {
+  font-size: clamp(1rem, 1.2rem, 1.5rem);
+  width: clamp(300px, 800px, 80vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
+  .hero {
+    padding: 6rem 0;
+  }
+
+  .intro {
+    font-size: clamp(1rem, 1.5rem, 2rem);
+  }
+
   .projectGrid {
     grid-template-columns: repeat(4, 1fr);
   }

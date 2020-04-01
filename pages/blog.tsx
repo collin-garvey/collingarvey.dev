@@ -1,4 +1,5 @@
 import React from 'react';
+import {NextPageContext} from 'next';
 import Grid from '../components/Grid';
 import Link from 'next/link';
 import matter from 'gray-matter';
@@ -9,7 +10,7 @@ interface IPostLinkProps {
   date: string;
 }
 
-const PostLink: React.FC<IPostLinkProps> = props => {
+const PostLink: React.SFC<IPostLinkProps> = props => {
   const {slug, title, date} = props;
   return (
     <Link href="/blog/[slug]" as={`/blog/${slug}`}>
@@ -22,15 +23,15 @@ const PostLink: React.FC<IPostLinkProps> = props => {
 };
 
 const Blog = props => {
-  console.log(props.allBlogs);
   return (
     <Grid columns={1}>
       <h2>Blog</h2>
       <ul>
         {props.allBlogs.length &&
-          props.allBlogs.map(post => {
+          props.allBlogs.map((post, key: number) => {
             return (
               <PostLink
+                key={key}
                 slug={post.slug}
                 title={post.document.data.title}
                 date={post.document.data.date}
@@ -42,7 +43,7 @@ const Blog = props => {
   );
 };
 
-Blog.getInitialProps = async function() {
+Blog.getInitialProps = async () => {
   const siteConfig = await import('../data/config.json');
   const posts = (context => {
     const keys = context.keys();
