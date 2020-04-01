@@ -3,6 +3,15 @@
   place-items: center;
   padding: 2rem 0;
 }
+
+.headshot {
+  display: block;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 1rem;
+}
+
 .hero h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: clamp(1, 1.2, 1.5);

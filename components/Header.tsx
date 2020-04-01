@@ -17,17 +17,12 @@ const Header: React.SFC = () => {
       </Head>
       <header className={styles.Header}>
         <Grid columns={1}>
-          <Link href="/">
-            <div className={styles.masthead}>
-              <img
-                className={styles.headshot}
-                src="/static/images/headshot.jpg"
-                alt="Colliente"
-              />
-
-              <Navigation />
-            </div>
-          </Link>
+          <div className={styles.masthead}>
+            <Link href="/">
+              <a>Collin Garvey</a>
+            </Link>
+            <Navigation />
+          </div>
         </Grid>
       </header>
     </>

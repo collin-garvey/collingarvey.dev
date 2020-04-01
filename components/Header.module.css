@@ -2,17 +2,13 @@
   padding: 2rem 0;
 }
 
-.headshot {
-  display: block;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-}
-
 .masthead {
   display: flex;
   align-items: center;
   grid-column: span 24;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 .masthead > div {

@@ -9,6 +9,11 @@ const Index: React.FC = () => {
         <Grid columns={1}>
           <div className={styles.heroContent}>
             <h2>
+              <img
+                className={styles.headshot}
+                src="/static/images/headshot.jpg"
+                alt="Colliente"
+              />
               I'm Collin Garvey, a Front-End Engineer, Manager, and soccer fan
               based in Orlando, FL
             </h2>
@@ -36,7 +41,7 @@ const Index: React.FC = () => {
             enjoy front-end development the most. I'm really into React and
             isomorphic JS, in general. I also dabble in{' '}
             <a href="https://codepen.io/collin-garvey">creative coding</a> when
-            I want to mess around.
+            I'm feeling spicy.
           </p>
         </Grid>
         <Grid columns={3}>

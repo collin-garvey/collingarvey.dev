@@ -3,9 +3,16 @@
 }
 
 .nav a {
-  color: var(--accent);
+  color: var(--accent2);
+  font-weight: 600;
   margin: 0 0.3rem;
   padding: 0.3rem;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .nav a:last-of-type {
