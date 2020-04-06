@@ -41,7 +41,8 @@
     "react-svg": "^11.0.15",
     "remark": "^11.0.2",
     "remark-html": "^11.0.1",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "three": "^0.115.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",

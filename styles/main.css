@@ -1,13 +1,13 @@
 :root {
-  --background: #393745;
-  --accent: #20d279;
-  --accent2: #ffffff;
+  --background: #000000;
+  --accent: #ffffff;
+  --body-color: hsla(0, 0%, 100%, 0.66);
   --break-sm: 420px;
   --break-md: 768px;
   --break-lg: 1024px;
   --break-xl: 1280px;
-  --font-headline: 'Source Sans Pro', serif;
-  --font-body: 'Source Sans Pro', sans-serif;
+  --font-teko: 'Teko', serif;
+  --font-open: 'Open Sans', sans-serif;
 }
 
 * {
@@ -22,8 +22,9 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-body);
-  color: var(--accent2);
+  font-family: var(--font-open);
+  font-size: clamp(1rem, 1rem, 2rem);
+  color: var(--body-color);
   height: 100vh;
   background: var(--background);
 }
@@ -31,20 +32,12 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--accent);
-  font-family: var(--font-headline);
+  color: #ffffff;
+  font-family: var(--font-teko);
   margin: 1rem 0;
   line-height: 1;
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  color: var(--accent2);
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 p {

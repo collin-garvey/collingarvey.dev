@@ -1,6 +1,6 @@
 import Project from '../components/ProjectCard';
 import Grid from '../components/Grid';
-import styles from './../styles/Index.module.css';
+import styles from './Index.module.css';
 
 const Index: React.FC = () => {
   return (
@@ -8,15 +8,10 @@ const Index: React.FC = () => {
       <section className={styles.hero}>
         <Grid columns={1}>
           <div className={styles.heroContent}>
-            <h2>
-              <img
-                className={styles.headshot}
-                src="/static/images/headshot.jpg"
-                alt="Colliente"
-              />
-              I'm Collin Garvey, a Front-End Engineer, Manager, and soccer fan
-              based in Orlando, FL
-            </h2>
+            <h2>Collin Garvey</h2>
+            <span>
+              Front-end engineer and creative technologist based in Orlando, FL
+            </span>
           </div>
         </Grid>
       </section>
@@ -30,7 +25,7 @@ const Index: React.FC = () => {
             </a>
             ,{' '}
             <a href="https://facebook.com" target="_blank">
-              (the) Facebook
+              Facebook
             </a>
             , and{' '}
             <a href="https://prpl.rs" target="_blank">
@@ -44,7 +39,7 @@ const Index: React.FC = () => {
             I'm feeling spicy.
           </p>
         </Grid>
-        <Grid columns={3}>
+        <Grid columns={1}>
           <Project url="https://www.oculus.com/medium/" title="Oculus Medium" />
           <Project
             url="https://facebook.com/"

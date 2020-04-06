@@ -11,7 +11,7 @@ const Header: React.SFC = () => {
         <title>Collin Garvey | Experienced Full-Stack Engineer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&family=Source+Sans+Pro:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Teko:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -19,7 +19,7 @@ const Header: React.SFC = () => {
         <Grid columns={1}>
           <div className={styles.masthead}>
             <Link href="/">
-              <a>Collin Garvey</a>
+              <a>{'<//>'}</a>
             </Link>
             <Navigation />
           </div>
