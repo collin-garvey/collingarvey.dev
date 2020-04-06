@@ -10,7 +10,9 @@
   --font-open: 'Open Sans', sans-serif;
 }
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -64,6 +66,10 @@ h2 a[href] {
   text-decoration-thickness: 2px;
   transition: all 0.1s ease-out;
   text-decoration-color: rgba(0, 255, 0, 0.5);
+}
+
+canvas {
+  display: block;
 }
 
 .page-transition-enter {

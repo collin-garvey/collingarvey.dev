@@ -19,7 +19,7 @@ const Header: React.SFC = () => {
         <Grid columns={1}>
           <div className={styles.masthead}>
             <Link href="/">
-              <a>{'<//>'}</a>
+              <a>{'CO//IN GARVEY'}</a>
             </Link>
             <Navigation />
           </div>

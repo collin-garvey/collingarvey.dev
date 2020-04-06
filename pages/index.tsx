@@ -1,10 +1,22 @@
+import {useEffect} from 'react';
 import Project from '../components/ProjectCard';
 import Grid from '../components/Grid';
 import styles from './Index.module.css';
+import {setupScene, destroyScene} from '../lib/Hero3D';
 
 const Index: React.FC = () => {
+  // Instantiate the ThreeJS scene
+  useEffect(() => {
+    setupScene();
+
+    return () => {
+      destroyScene();
+    };
+  }, []);
+
   return (
     <>
+      <div id="heroScene" className={styles.heroScene} />
       <section className={styles.hero}>
         <Grid columns={1}>
           <div className={styles.heroContent}>

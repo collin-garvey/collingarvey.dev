@@ -30,6 +30,11 @@
   text-align: center;
 }
 
+.heroScene {
+  height: 850px;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     padding: 6rem 0;
