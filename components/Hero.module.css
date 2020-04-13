@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+}
+
+.heroContent h1 {
+  position: relative;
+  text-align: center;
+  color: var(--headline);
+  background-image: linear-gradient(90deg, var(--highlight), var(--highlight));
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+  background-size: 100% 5%;
+  max-width: 750px;
+  text-shadow: 1px 2px 0px var(--background-dark);
+  transform-style: preserve-3d;
+}
+
+.heroContent h1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  perspective: 23rem;
+  perspective-origin: bottom center;
+  background: linear-gradient(180deg, var(--highlight), rgba(0, 0, 0, 0));
+  transform: rotateX(-80deg) translateX(0px) translateY(0) translateZ(20px);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+}
+
+.heroContent span {
+  color: var(--accent);
+  font-size: clamp(1rem, 1.2rem, 1.5rem);
+  max-width: var(--reading-width);
+}

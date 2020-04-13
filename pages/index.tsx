@@ -1,5 +1,8 @@
 import {useEffect} from 'react';
-import Project from '../components/ProjectCard';
+import Link from 'next/link';
+import ProjectCard from '../components/ProjectCard';
+import Hero from '../components/Hero';
+import Section from '../components/Section';
 import styles from './Index.module.css';
 import {setupScene, destroyScene} from '../lib/Hero3D';
 
@@ -15,15 +18,10 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <section className={styles.hero}>
-        <div id="heroScene" className={styles.heroScene} />
-        <div className={styles.heroContent}>
-          <h2 className={styles.h2}>Living life, bit by bit</h2>
-        </div>
-      </section>
-      <section>
-        <h3>My Work</h3>
-        <p className={styles.intro}>
+      <div id="heroScene" className={styles.threeScene} />
+      <Hero />
+      <Section theme="light">
+        <p>
           I've built neat things for{' '}
           <a href="https://oculus.com" target="_blank">
             Oculus VR
@@ -37,20 +35,20 @@ const Index: React.FC = () => {
             Purple Rock Scissors
           </a>{' '}
           where I previously served as Development Manager. I've done pretty
-          much everything web related over my 12 years of experinece, but I
-          enjoy front-end development the most. I'm really into React and
-          isomorphic JS, in general. I also dabble in{' '}
+          much everything web related over my 12 years of experience, but I
+          enjoy front-end development the most.
+        </p>
+        <p>
+          I'm really into React and isomorphic JS, in general. I also dabble in{' '}
           <a href="https://codepen.io/collin-garvey">creative coding</a> when
           I'm feeling spicy.
         </p>
-      </section>
-      <section>
-        <div>
-          <p>I've recently started a blog. Have some reads:</p>
-          <h3>Blog Posts</h3>
-        </div>
-      </section>
-      <section></section>
+      </Section>
+      <Section>
+        <h3>Featured Project</h3>
+        <ProjectCard title="Oculus Medium" />
+        <Link href="/work/">View more</Link>
+      </Section>
     </>
   );
 };

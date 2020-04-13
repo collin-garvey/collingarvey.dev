@@ -1,10 +1,7 @@
-@custom-media --break-sm screen and (min-width: 420px);
-@custom-media --break-md screen and (min-width: 768px);
-@custom-media --break-lg screen and (min-width: 1024px);
-@custom-media --break-xl screen and (min-width: 1280px);
-
 :root {
   --background: #16161a;
+  --background-light: #242629;
+  --background-dark: #010101;
   --highlight: #7f5af0;
   --secondary: #72757e;
   --tertiary: #2cb67d;
@@ -12,7 +9,13 @@
   --headline: #fffffe;
   --font-teko: 'Teko', serif;
   --font-open: 'Open Sans', sans-serif;
+  --reading-width: 60rem;
 }
+
+@custom-media --break-sm screen and (min-width: 420px);
+@custom-media --break-md screen and (min-width: 768px);
+@custom-media --break-lg screen and (min-width: 1024px);
+@custom-media --break-xl screen and (min-width: 1280px);
 
 *,
 ::after,
@@ -31,8 +34,16 @@ body {
   font-family: var(--font-open);
   font-size: clamp(1rem, 1rem, 2rem);
   color: var(--paragraph);
-  height: 100vh;
   background: var(--background);
+}
+
+h1,
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 h1,
@@ -40,12 +51,13 @@ h2,
 h3 {
   color: var(--headline);
   font-family: var(--font-teko);
+  line-height: clamp(1, 1.2, 1.5);
   margin: 1rem 0;
-  line-height: 1;
   font-weight: normal;
 }
 
 p {
+  font-size: clamp(1rem, 1.3rem, 1.5rem);
   line-height: 1.36;
 }
 
@@ -88,4 +100,11 @@ canvas {
 .page-transition-exit-active {
   opacity: 0;
   transition: opacity 50ms;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

@@ -1,0 +1,28 @@
+.section {
+  position: relative;
+  padding: 3rem 0;
+}
+
+/* .section:before {
+  content: './work';
+  font-family: 'Teko';
+  font-size: 3rem;
+  color: var(--background-dark);
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: 2;
+} */
+
+.sectionLight {
+  background-color: var(--background-light);
+}
+
+.sectionDark {
+  background-color: var(--background-dark);
+}
+
+.sectionContent {
+  composes: container from '../styles/grid.module.css';
+  max-width: var(--reading-width);
+}

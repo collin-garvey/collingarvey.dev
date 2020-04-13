@@ -1,21 +1,18 @@
 .Header {
-  composes: gridContainer from './Grid.module.css';
+  composes: container from '../styles/grid.module.css';
   position: absolute;
+  display: flex;
   top: 0;
   left: 0;
   right: 0;
-  padding: 2rem 0;
+  padding-top: 2rem;
   z-index: 3;
 }
 
 .masthead {
-  display: flex;
-  align-items: center;
-  grid-column: span 24;
   font-weight: 600;
+  font-family: var(--font-teko);
+  font-size: 1.5rem;
+  text-transform: uppercase;
   color: var(--accent);
-}
-
-.masthead > div {
-  margin: 0 0 0 1rem;
 }

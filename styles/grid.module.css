@@ -1,4 +1,4 @@
-.gridContainer {
+.container {
   min-width: 300px;
   max-width: 1480px;
   margin: 0 auto;
@@ -19,7 +19,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .gridContainer {
+  .container {
     padding: 0 4rem;
   }
   .span-full {
