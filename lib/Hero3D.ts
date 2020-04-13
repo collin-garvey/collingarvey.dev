@@ -168,8 +168,6 @@ export const setupScene = () => {
       e.clientX / rootElem.clientWidth,
       e.clientY / rootElem.clientHeight,
     );
-
-    console.log(mousePositionNormalized);
   }
   window.addEventListener('mousemove', mousemove);
 
@@ -202,8 +200,6 @@ export const setupScene = () => {
 
     modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
     modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 2;
-
-    console.log(modelContainer.rotation.y);
 
     renderer.setRenderTarget(lowResRenderTarget);
     renderer.render(mainScene, mainCamera);
