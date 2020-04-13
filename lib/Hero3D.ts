@@ -11,12 +11,17 @@ import VolumetricLightCylinder from './shaders/VolumetricLightCylinder';
 
 let mainScene: THREE.Scene,
   mainCamera: THREE.PerspectiveCamera,
+  ambientLight: THREE.AmbientLight,
   backLight: THREE.PointLight,
   fillLight: THREE.PointLight,
   keyLight: THREE.PointLight,
   geometry: THREE.BoxGeometry,
   renderer: THREE.WebGLRenderer,
   reqAnimID: number,
+  frustumHeight: number,
+  frustumWidth: number,
+  frustumHeightHalf: number,
+  frustumWidthHalf: number,
   resizeRenderer: () => void;
 
 const ROOT_SELECTOR = 'heroScene';
@@ -45,21 +50,22 @@ export const setupScene = () => {
   mainCamera.position.z = 8;
 
   // Point Lights
-  backLight = new THREE.PointLight(0x00aaff, 4, 0);
+  backLight = new THREE.PointLight(0x7f00ff, 5, 0);
   backLight.position.set(-5, 5, -5);
   mainScene.add(backLight);
 
-  fillLight = new THREE.PointLight(0x00aaff, 1.7, 0);
+  fillLight = new THREE.PointLight(0xffffff, 7, 0);
   fillLight.position.set(-5, 0, 5);
   mainScene.add(fillLight);
 
-  keyLight = new THREE.PointLight(0xff00ff, 3, 0);
+  keyLight = new THREE.PointLight(0x7f00ff, 10, 0);
   keyLight.position.set(5, 0, 0);
   mainScene.add(keyLight);
 
   // Renderer
-  renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer({alpha: true});
   renderer.setSize(rootElem.clientWidth, rootElem.clientHeight);
+  renderer.setClearColor(0x000000, 0);
   rootElem.appendChild(renderer.domElement);
 
   // Load 3D Model
@@ -84,7 +90,7 @@ export const setupScene = () => {
   const FONT_CHAR_SIZE = new THREE.Vector2(8, 8);
 
   const fontLoader = new THREE.TextureLoader();
-  const fontFile = '/static/images/font.png';
+  const fontFile = '/static/images/collin-font.png';
   const tFont = fontLoader.load(fontFile);
   tFont.minFilter = THREE.NearestFilter;
   tFont.magFilter = THREE.NearestFilter;
@@ -155,20 +161,49 @@ export const setupScene = () => {
 
   finalComposer.addPass(asciiPass);
 
+  const mousePositionNormalized = new THREE.Vector2(0, 0);
+
+  function mousemove(e) {
+    mousePositionNormalized.set(
+      e.clientX / rootElem.clientWidth,
+      e.clientY / rootElem.clientHeight,
+    );
+
+    console.log(mousePositionNormalized);
+  }
+  window.addEventListener('mousemove', mousemove);
+
   // Handle Window Resize
   resizeRenderer = () => {
     renderer.setSize(rootElem.clientWidth, rootElem.clientHeight);
     mainCamera.aspect = rootElem.clientWidth / rootElem.clientHeight;
     mainCamera.updateProjectionMatrix();
+    updateAsciiRenderSize();
   };
   window.addEventListener('resize', debounce(resizeRenderer, RESIZE_DEBOUNCE));
 
   const clock = new THREE.Clock();
 
+  function updateFrustumValues() {
+    frustumHeight =
+      2.0 *
+      mainCamera.position.z *
+      Math.tan(mainCamera.fov * 0.5 * THREE.MathUtils.DEG2RAD);
+
+    frustumWidth = frustumHeight * mainCamera.aspect;
+
+    frustumHeightHalf = frustumHeight / 2;
+    frustumWidthHalf = frustumWidth / 2;
+  }
+  updateFrustumValues();
+
   function renderScene() {
     const delta = clock.getDelta();
 
-    // modelContainer.rotation.y += delta * 0.5;
+    modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
+    modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 2;
+
+    console.log(modelContainer.rotation.y);
 
     renderer.setRenderTarget(lowResRenderTarget);
     renderer.render(mainScene, mainCamera);

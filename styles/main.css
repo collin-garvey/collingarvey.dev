@@ -1,7 +1,10 @@
 :root {
-  --background: #000000;
-  --accent: #ffffff;
-  --body-color: hsla(0, 0%, 100%, 0.66);
+  --background: #16161a;
+  --highlight: #7f5af0;
+  --secondary: #72757e;
+  --tertiary: #2cb67d;
+  --paragraph: #94a1b2;
+  --headline: #fffffe;
   --break-sm: 420px;
   --break-md: 768px;
   --break-lg: 1024px;
@@ -26,7 +29,7 @@ body {
   margin: 0;
   font-family: var(--font-open);
   font-size: clamp(1rem, 1rem, 2rem);
-  color: var(--body-color);
+  color: var(--paragraph);
   height: 100vh;
   background: var(--background);
 }
@@ -34,12 +37,11 @@ body {
 h1,
 h2,
 h3 {
-  color: #ffffff;
+  color: var(--headline);
   font-family: var(--font-teko);
   margin: 1rem 0;
   line-height: 1;
   font-weight: normal;
-  text-transform: uppercase;
 }
 
 p {
@@ -48,13 +50,13 @@ p {
 
 a,
 a[href] {
-  color: var(--accent);
+  color: var(--secondary);
   text-decoration: none;
   transition: color 200ms ease-out;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--highlight);
 }
 
 p a[href],
@@ -65,7 +67,7 @@ h2 a[href] {
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;
   transition: all 0.1s ease-out;
-  text-decoration-color: rgba(0, 255, 0, 0.5);
+  text-decoration-color: var(--highlight);
 }
 
 canvas {

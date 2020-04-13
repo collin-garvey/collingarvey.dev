@@ -16,16 +16,13 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <div id="heroScene" className={styles.heroScene} />
       <section className={styles.hero}>
-        <Grid columns={1}>
-          <div className={styles.heroContent}>
-            <h2>Collin Garvey</h2>
-            <span>
-              Front-end engineer and creative technologist based in Orlando, FL
-            </span>
-          </div>
-        </Grid>
+        <div id="heroScene" className={styles.heroScene} />
+        <div className={styles.heroContent}>
+          <Grid columns={1}>
+            <h2>Living life, bit by bit</h2>
+          </Grid>
+        </div>
       </section>
       <section>
         <h3>My Work</h3>
