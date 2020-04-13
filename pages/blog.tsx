@@ -1,6 +1,5 @@
 import React from 'react';
 import {NextPageContext} from 'next';
-import Grid from '../components/Grid';
 import Link from 'next/link';
 import matter from 'gray-matter';
 
@@ -24,7 +23,7 @@ const PostLink: React.SFC<IPostLinkProps> = props => {
 
 const Blog = props => {
   return (
-    <Grid columns={1}>
+    <>
       <h2>Blog</h2>
       <ul>
         {props.allBlogs.length &&
@@ -39,7 +38,7 @@ const Blog = props => {
             );
           })}
       </ul>
-    </Grid>
+    </>
   );
 };
 

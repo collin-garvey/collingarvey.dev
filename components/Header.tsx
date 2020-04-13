@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Grid from './Grid';
 import Navigation from './Navigation';
 import styles from './Header.module.css';
 
@@ -16,14 +15,12 @@ const Header: React.SFC = () => {
         />
       </Head>
       <header className={styles.Header}>
-        <Grid columns={1}>
-          <div className={styles.masthead}>
-            <Link href="/">
-              <a>{'CO//IN GARVEY'}</a>
-            </Link>
-            <Navigation />
-          </div>
-        </Grid>
+        <div className={styles.masthead}>
+          <Link href="/">
+            <a>{'CO//IN GARVEY'}</a>
+          </Link>
+          <Navigation />
+        </div>
       </header>
     </>
   );

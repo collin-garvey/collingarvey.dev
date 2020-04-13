@@ -36,9 +36,7 @@
     "lodash.debounce": "^4.0.8",
     "next": "^9.3.4",
     "next-page-transitions": "^1.0.0-beta.2",
-    "node-sass": "^4.13.1",
-    "postcss-modules-values": "^3.0.0",
-    "postcss-nesting": "^7.0.1",
+    "postcss-flexbugs-fixes": "^4.2.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -46,9 +44,7 @@
     "react-svg": "^11.0.15",
     "remark": "^11.0.2",
     "remark-html": "^11.0.1",
-    "sass": "^1.26.3",
-    "three": "^0.115.0",
-    "three-gltf-loader": "^1.111.0"
+    "three": "^0.115.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
