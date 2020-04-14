@@ -10,6 +10,8 @@
   --font-teko: 'Teko', serif;
   --font-open: 'Open Sans', sans-serif;
   --reading-width: 60rem;
+  --max-content-width: 1480px;
+  --min-content-width: 320px;
 }
 
 @custom-media --break-sm screen and (min-width: 420px);

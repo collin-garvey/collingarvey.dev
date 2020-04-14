@@ -15,20 +15,6 @@
   transform-style: preserve-3d;
 }
 
-.heroContent h1:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -30px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  perspective: 23rem;
-  perspective-origin: bottom center;
-  background: linear-gradient(180deg, var(--highlight), rgba(0, 0, 0, 0));
-  transform: rotateX(-80deg) translateX(0px) translateY(0) translateZ(20px);
-}
-
 .heroContent {
   display: flex;
   flex-direction: column;

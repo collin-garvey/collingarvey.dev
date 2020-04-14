@@ -1,6 +1,8 @@
 import React from 'react';
 import {NextPageContext} from 'next';
 import Link from 'next/link';
+import Hero from '../components/Hero';
+import Section from '../components/Section';
 import matter from 'gray-matter';
 
 interface IPostLinkProps {
@@ -24,20 +26,23 @@ const PostLink: React.SFC<IPostLinkProps> = props => {
 const Blog = props => {
   return (
     <>
-      <h2>Blog</h2>
-      <ul>
-        {props.allBlogs.length &&
-          props.allBlogs.map((post, key: number) => {
-            return (
-              <PostLink
-                key={key}
-                slug={post.slug}
-                title={post.document.data.title}
-                date={post.document.data.date}
-              />
-            );
-          })}
-      </ul>
+      <Hero />
+      <Section>
+        <h1>Blog</h1>
+        <ul>
+          {props.allBlogs.length &&
+            props.allBlogs.map((post, key: number) => {
+              return (
+                <PostLink
+                  key={key}
+                  slug={post.slug}
+                  title={post.document.data.title}
+                  date={post.document.data.date}
+                />
+              );
+            })}
+        </ul>
+      </Section>
     </>
   );
 };

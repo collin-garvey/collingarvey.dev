@@ -3,8 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 
-import styles from '../../styles/Post.module.css';
-
 export default function Post({content, data}) {
   const frontmatter = data;
 
@@ -12,7 +10,7 @@ export default function Post({content, data}) {
     <>
       <Hero />
       <Section>
-        <article className={styles.Post}>
+        <article>
           <h1>{frontmatter.title}</h1>
           <ReactMarkdown source={content} />
         </article>
@@ -23,7 +21,7 @@ export default function Post({content, data}) {
 
 Post.getInitialProps = async context => {
   const {slug} = context.query;
-  const content = await import(`../../_posts/${slug}.md`);
+  const content = await import(`../../_work/${slug}.md`);
   const data = matter(content.default);
 
   return {...data};

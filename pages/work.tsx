@@ -1,19 +1,19 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import Section from '../components/Section';
 import Project from '../components/ProjectCard';
+
+import styles from '../styles/work.module.css';
 
 const Work: React.SFC = () => {
   return (
     <>
-      <Project url="https://facebook.com/" title="Facebook Connectivity App" />
-      <Project
-        url="https://transparency.facebook.com/"
-        title="Facebook Transparency"
-      />
-      <Project url="https://www.oculus.com/medium/" title="Oculus Medium" />
-      <Project
-        url="https://politics.facebook.com/"
-        title="Facebook Government Politics &amp; Advocacy"
-      />
+      <Hero />
+      <Section width="wide">
+        <div className={styles.workGrid}>
+          <Project slug="fb-connectivity" title="Facebook Connectivity App" />
+        </div>
+      </Section>
     </>
   );
 };

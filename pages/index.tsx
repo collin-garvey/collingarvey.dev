@@ -3,8 +3,10 @@ import Link from 'next/link';
 import ProjectCard from '../components/ProjectCard';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
-import styles from './Index.module.css';
+import LinkButton from '../components/LinkButton';
 import {setupScene, destroyScene} from '../lib/Hero3D';
+
+import styles from './Index.module.css';
 
 const Index: React.FC = () => {
   // Instantiate the ThreeJS scene
@@ -46,8 +48,10 @@ const Index: React.FC = () => {
       </Section>
       <Section>
         <h3>Featured Project</h3>
-        <ProjectCard title="Oculus Medium" />
-        <Link href="/work/">View more</Link>
+        <ProjectCard slug="fb-connectivity" title="Oculus Medium" />
+        <LinkButton theme="highlight" href="/work/">
+          View more
+        </LinkButton>
       </Section>
     </>
   );

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 interface SectionProps {
   theme?: 'light' | 'dark';
+  width?: 'wide' | 'normal';
 }
 
 const Section: React.SFC<SectionProps> = props => {
@@ -13,6 +14,7 @@ const Section: React.SFC<SectionProps> = props => {
         [styles.section]: true,
         [styles.sectionLight]: props.theme === 'light',
         [styles.sectionDark]: props.theme === 'dark',
+        [styles.sectionWide]: props.width === 'wide',
       })}
     >
       <div className={styles.sectionContent}>{props.children}</div>

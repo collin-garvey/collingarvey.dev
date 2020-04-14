@@ -9,7 +9,7 @@ const Navigation: React.SFC = () => {
       <Link href="/blog">
         <a>Blog</a>
       </Link>
-      <Link href="/">
+      <Link href="/work">
         <a>Work</a>
       </Link>
       <Link href="/about">

@@ -1,0 +1,17 @@
+.LinkButton,
+.LinkButton[href] {
+  display: inline-block;
+  padding: 0.5rem;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.themeHighlight {
+  background-color: var(--highlight);
+}
+.themeDark {
+  background-color: var(--background-dark);
+}
+.themeLight {
+  background-color: var(--highlight);
+}
