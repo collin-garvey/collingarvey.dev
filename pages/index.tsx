@@ -1,14 +1,15 @@
 import {useEffect} from 'react';
 import Link from 'next/link';
-import ProjectCard from '../components/ProjectCard';
+import FeaturedProjectCard from '../components/FeaturedProjectCard';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import {setupScene, destroyScene} from '../lib/Hero3D';
+import {getWorkBySlug} from '../lib/workUtils';
 
 import styles from './Index.module.css';
 
-const Index: React.FC = () => {
+const Index = props => {
   // Instantiate the ThreeJS scene
   useEffect(() => {
     setupScene();
@@ -17,6 +18,10 @@ const Index: React.FC = () => {
       destroyScene();
     };
   }, []);
+
+  const {featuredProject, siteConfig} = props;
+
+  console.log(featuredProject);
 
   return (
     <>
@@ -48,13 +53,26 @@ const Index: React.FC = () => {
       </Section>
       <Section>
         <h3>Featured Project</h3>
-        <ProjectCard slug="fb-connectivity" title="Oculus Medium" />
+        <FeaturedProjectCard
+          slug={siteConfig.featuredWorkSlug}
+          title={featuredProject.frontmatter.title}
+        />
         <LinkButton theme="highlight" href="/work/">
           View more
         </LinkButton>
       </Section>
     </>
   );
+};
+
+Index.getInitialProps = async () => {
+  const siteConfig = await import('../data/config.json');
+  const featuredProject = await getWorkBySlug(siteConfig.featuredWorkSlug);
+
+  return {
+    featuredProject,
+    siteConfig,
+  };
 };
 
 export default Index;

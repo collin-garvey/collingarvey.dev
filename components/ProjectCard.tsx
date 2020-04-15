@@ -12,13 +12,13 @@ const Project: React.SFC<IProjectProps> = props => {
     <div className={styles.projectCard}>
       <Link href={`/work/${props.slug}`}>
         <a>
-          <div className={styles.aspectContainer}>
+          <div className="aspectContainer">
             <img
-              className={styles.aspectContainer__inner}
+              className="aspectContainer__inner"
               src="/static/images/projects/oculus-medium/oc-medium-landing.jpg"
             />
           </div>
-          <span className="project__title">{props.title}</span>
+          <span>{props.title}</span>
         </a>
       </Link>
     </div>
