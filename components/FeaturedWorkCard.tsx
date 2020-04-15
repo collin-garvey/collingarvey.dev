@@ -1,25 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './FeaturedProjectCard.module.css';
+import styles from './FeaturedWorkCard.module.css';
+import {imagesPath} from '../data/config.json';
 
-interface IFeaturedProjectProps {
+interface IFeaturedWorkProps {
   slug: string;
-  title: string;
+  workObject: {
+    frontmatter: {
+      [key: string]: any;
+    };
+    markdown: string;
+  };
 }
 
-const Project: React.SFC<IFeaturedProjectProps> = props => {
+const Project: React.SFC<IFeaturedWorkProps> = props => {
+  const {workObject} = props;
   return (
     <div className={styles.FeaturedProjectCard}>
       <div className={styles.aspectContainer}>
         <img
           className={styles.aspectContainer__inner}
-          src="/static/images/projects/oculus-medium/oc-medium-landing.jpg"
+          src={`${imagesPath}${workObject.frontmatter.mainImage}`}
         />
       </div>
       <div>
         <Link href={`/work/${props.slug}`}>
           <a>
-            <h3 className="project__title">{props.title}</h3>
+            <h3>{workObject.frontmatter.title}</h3>
           </a>
         </Link>
         <p></p>

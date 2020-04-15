@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import Link from 'next/link';
-import FeaturedProjectCard from '../components/FeaturedProjectCard';
+import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
@@ -19,9 +19,7 @@ const Index = props => {
     };
   }, []);
 
-  const {featuredProject, siteConfig} = props;
-
-  console.log(featuredProject);
+  const {featuredWork, siteConfig} = props;
 
   return (
     <>
@@ -53,9 +51,9 @@ const Index = props => {
       </Section>
       <Section>
         <h3>Featured Project</h3>
-        <FeaturedProjectCard
+        <FeaturedWorkCard
           slug={siteConfig.featuredWorkSlug}
-          title={featuredProject.frontmatter.title}
+          workObject={featuredWork}
         />
         <LinkButton theme="highlight" href="/work/">
           View more
@@ -67,10 +65,10 @@ const Index = props => {
 
 Index.getInitialProps = async () => {
   const siteConfig = await import('../data/config.json');
-  const featuredProject = await getWorkBySlug(siteConfig.featuredWorkSlug);
+  const featuredWork = await getWorkBySlug(siteConfig.featuredWorkSlug);
 
   return {
-    featuredProject,
+    featuredWork,
     siteConfig,
   };
 };

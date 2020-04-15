@@ -1,21 +1,62 @@
 .carousel {
   display: flex;
   width: 100%;
-  height: 200px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--highlight) var(--background);
   -ms-overflow-style: none;
 }
 
-.carousel::-webkit-scrollbar-track,
-.carousel::-webkit-scrollbar,
+.carousel::-webkit-scrollbar {
+  width: 11px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
 .carousel::-webkit-scrollbar-thumb {
-  width: 0 !important;
+  background-color: var(--highlight);
+  border: 3px solid var(--background);
+  border-width: 3px 0;
 }
 
 .item {
   flex-shrink: 0;
   width: 100%;
   scroll-snap-align: center;
+  margin: 0 0.5rem;
+}
+
+.item:first-child {
+  margin: 0 0.5rem 0 0;
+}
+
+.item:last-child {
+  margin: 0 0 0 0.5rem;
+}
+
+.instructions {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (--break-lg) {
+  .carousel {
+    flex-direction: column;
+  }
+
+  .item,
+  .item:first-child,
+  .item:last-child {
+    margin: 0 0 2rem;
+  }
+
+  .instructions {
+    display: none;
+  }
 }

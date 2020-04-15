@@ -85,6 +85,11 @@ h2 a[href] {
   text-decoration-color: var(--highlight);
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 canvas {
   display: block;
 }

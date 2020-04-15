@@ -1,5 +1,4 @@
 .container {
-  min-width: var(--min-content-width);
   max-width: var(--max-content-width);
   margin: 0 auto;
   padding: 0 2rem;

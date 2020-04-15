@@ -1,5 +1,6 @@
 {
   "title": "Collin Garvey",
-  "description": "The personal blog of Collin Garvey",
-  "featuredWorkSlug": "fb-connectivity"
+  "description": "The personal site of Collin Garvey",
+  "featuredWorkSlug": "fb-connectivity",
+  "imagesPath": "/static/images/"
 }

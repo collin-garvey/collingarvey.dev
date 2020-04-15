@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
-import Project from '../components/ProjectCard';
+import Project from '../components/WorkCard';
 
 import styles from '../styles/work.module.css';
 
