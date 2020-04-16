@@ -10,10 +10,9 @@ export default function Post({content, data}) {
 
   return (
     <>
-      <Hero />
+      <Hero headline={frontmatter.title} />
       <Section>
         <article className={styles.Post}>
-          <h1>{frontmatter.title}</h1>
           <ReactMarkdown source={content} />
         </article>
       </Section>

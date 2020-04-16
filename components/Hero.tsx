@@ -3,14 +3,18 @@ import Section from '../components/Section';
 
 import styles from './Hero.module.css';
 
-const Hero: React.SFC = () => {
+interface IHeroProps {
+  headline: string;
+  imagePath?: string;
+}
+
+const Hero: React.SFC<IHeroProps> = props => {
   return (
-    <Section>
+    <div className={styles.hero}>
       <div className={styles.heroContent}>
-        <h1>Collin Garvey</h1>
-        <span>Web Engineer with a love for Front-End and Creative Tech</span>
+        <h1>{props.headline}</h1>
       </div>
-    </Section>
+    </div>
   );
 };
 

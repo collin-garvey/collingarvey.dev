@@ -17,9 +17,8 @@ export default function Post({content, data}) {
 
   return (
     <>
-      <Hero />
+      <Hero headline={frontmatter.title} />
       <Section width="wide">
-        <h1>{frontmatter.title}</h1>
         <article className={styles.WorkPost}>
           <div className={styles.sidebar}>
             <Carousel images={carouselImages} />

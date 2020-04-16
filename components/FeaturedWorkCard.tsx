@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import LinkButton from './LinkButton';
 import styles from './FeaturedWorkCard.module.css';
 import {imagesPath} from '../data/config.json';
 
@@ -29,7 +30,10 @@ const Project: React.SFC<IFeaturedWorkProps> = props => {
             <h3>{workObject.frontmatter.title}</h3>
           </a>
         </Link>
-        <p></p>
+        <p>{workObject.frontmatter.featuredBlurb}</p>
+        <LinkButton theme="highlight" href="/work/">
+          View Project
+        </LinkButton>
       </div>
     </div>
   );

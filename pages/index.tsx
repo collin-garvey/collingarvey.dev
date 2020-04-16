@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import Link from 'next/link';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
-import Hero from '../components/Hero';
+import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
 import LinkButton from '../components/LinkButton';
 import {setupScene, destroyScene} from '../lib/Hero3D';
@@ -24,7 +24,7 @@ const Index = props => {
   return (
     <>
       <div id="heroScene" className={styles.threeScene} />
-      <Hero />
+      <HomeHero />
       <Section theme="light">
         <p>
           I've built neat things for{' '}
@@ -55,9 +55,13 @@ const Index = props => {
           slug={siteConfig.featuredWorkSlug}
           workObject={featuredWork}
         />
-        <LinkButton theme="highlight" href="/work/">
-          View more
-        </LinkButton>
+      </Section>
+      <Section theme="light">
+        <p>
+          <Link href="/work">
+            <a>View all work →</a>
+          </Link>
+        </p>
       </Section>
     </>
   );

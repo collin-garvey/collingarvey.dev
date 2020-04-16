@@ -26,9 +26,8 @@ const PostLink: React.SFC<IPostLinkProps> = props => {
 const Blog = props => {
   return (
     <>
-      <Hero />
+      <Hero headline="Blog" />
       <Section>
-        <h1>Blog</h1>
         <ul>
           {props.allBlogs.length &&
             props.allBlogs.map((post, key: number) => {
