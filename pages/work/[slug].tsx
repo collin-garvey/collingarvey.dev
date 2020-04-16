@@ -19,12 +19,12 @@ export default function Post({content, data}) {
     <>
       <Hero />
       <Section width="wide">
+        <h1>{frontmatter.title}</h1>
         <article className={styles.WorkPost}>
           <div className={styles.sidebar}>
             <Carousel images={carouselImages} />
           </div>
           <div className={styles.postContent}>
-            <h1>{frontmatter.title}</h1>
             <ReactMarkdown source={content} />
           </div>
         </article>
