@@ -17,7 +17,9 @@ export default function Post({content, data}) {
 
   return (
     <>
-      <Hero headline={frontmatter.title} />
+      <Hero imagePath={`${imagesPath}${frontmatter.mainImage}`}>
+        <h1>{frontmatter.title}</h1>
+      </Hero>
       <Section width="wide">
         <article className={styles.WorkPost}>
           <div className={styles.sidebar}>

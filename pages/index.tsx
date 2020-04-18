@@ -3,7 +3,6 @@ import Link from 'next/link';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
-import LinkButton from '../components/LinkButton';
 import {setupScene, destroyScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
 
@@ -28,15 +27,15 @@ const Index = props => {
       <Section theme="light">
         <p>
           I've built neat things for{' '}
-          <a href="https://oculus.com" target="_blank">
+          <a href="https://oculus.com" rel="noopener" target="_blank">
             Oculus VR
           </a>
           ,{' '}
-          <a href="https://facebook.com" target="_blank">
+          <a href="https://facebook.com" rel="noopener" target="_blank">
             Facebook
           </a>
           , and{' '}
-          <a href="https://prpl.rs" target="_blank">
+          <a href="https://prpl.rs" rel="noopener" target="_blank">
             Purple Rock Scissors
           </a>{' '}
           where I previously served as Development Manager. I've done pretty
@@ -45,8 +44,14 @@ const Index = props => {
         </p>
         <p>
           I'm really into React and isomorphic JS, in general. I also dabble in{' '}
-          <a href="https://codepen.io/collin-garvey">creative coding</a> when
-          I'm feeling spicy.
+          <a
+            href="https://codepen.io/collin-garvey"
+            rel="noopener"
+            target="_blank"
+          >
+            creative coding
+          </a>{' '}
+          when I'm feeling spicy.
         </p>
       </Section>
       <Section>

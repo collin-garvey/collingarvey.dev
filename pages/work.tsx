@@ -8,7 +8,9 @@ import styles from '../styles/work.module.css';
 const Work: React.SFC = () => {
   return (
     <>
-      <Hero headline="Work" />
+      <Hero>
+        <h1>Work</h1>
+      </Hero>
       <Section width="wide">
         <div className={styles.workGrid}>
           <Project slug="fb-connectivity" title="Facebook Connectivity App" />

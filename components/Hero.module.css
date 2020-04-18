@@ -1,9 +1,26 @@
 .hero {
+  position: relative;
   display: flex;
   align-items: flex-end;
   background: #000;
   min-height: 350px;
+  height: clamp(150px, 50vh, 350px);
   width: 100%;
+  overflow: hidden;
+  border-bottom: 3px solid var(--highlight);
+}
+
+.heroImage {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
 
 .heroContent {
@@ -13,17 +30,32 @@
 .heroContent h1 {
   display: inline-block;
   position: relative;
+  left: -30px;
   color: var(--headline);
-  background-image: linear-gradient(90deg, var(--highlight), var(--highlight));
-  background-repeat: no-repeat;
-  background-position: 0 90%;
-  background-size: 100% 5%;
-  text-shadow: 1px 2px 0px var(--background-dark);
+  background-color: rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
+  backdrop-filter: blur(10px);
+  padding: 12px 30px 4px;
+  margin: 0;
 }
 
 .heroContent span {
   color: var(--accent);
   font-size: clamp(1rem, 1.2rem, 1.5rem);
   max-width: var(--reading-width);
+}
+
+@media (--break-lg) {
+  .hero {
+    height: clamp(350px, 70vh, 700px);
+  }
+
+  .heroContent {
+    display: flex;
+    place-items: center flex-end;
+  }
+
+  .heroContent h1 {
+    left: 0;
+  }
 }
