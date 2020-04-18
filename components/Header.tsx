@@ -20,11 +20,11 @@ const Header: React.SFC = () => {
           </Link>
         </div>
         <nav className={styles.nav}>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
           <Link href="/work">
             <a>Work</a>
+          </Link>
+          <Link href="/blog">
+            <a>Blog</a>
           </Link>
           <Link href="/about">
             <a>About</a>

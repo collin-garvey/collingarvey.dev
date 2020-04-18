@@ -1,10 +1,11 @@
 import Hero from '../components/Hero';
 import Section from '../components/Section';
+import {imagesPath} from '../data/config.json';
 
 export default function About() {
   return (
     <>
-      <Hero>
+      <Hero imagePath={`${imagesPath}about/about-hero.jpg`}>
         <h1>About</h1>
       </Hero>
       <Section>

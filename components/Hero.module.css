@@ -25,12 +25,13 @@
 
 .heroContent {
   composes: container from '../styles/grid.module.css';
+  text-align: center;
 }
 
 .heroContent h1 {
   display: inline-block;
   position: relative;
-  left: -30px;
+  left: 0;
   color: var(--headline);
   background-color: rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
@@ -51,11 +52,10 @@
   }
 
   .heroContent {
-    display: flex;
-    place-items: center flex-end;
+    text-align: left;
   }
 
   .heroContent h1 {
-    left: 0;
+    left: -30px;
   }
 }
