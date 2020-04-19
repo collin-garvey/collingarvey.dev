@@ -1,5 +1,4 @@
 import React from 'react';
-import {NextPageContext} from 'next';
 import Link from 'next/link';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
