@@ -26,7 +26,7 @@ const PostLink: React.SFC<IPostLinkProps> = props => {
 const Blog = props => {
   return (
     <>
-      <Hero>
+      <Hero theme="short">
         <h1>Blog</h1>
       </Hero>
       <Section>

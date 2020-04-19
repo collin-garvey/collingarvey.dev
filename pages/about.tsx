@@ -5,7 +5,7 @@ import {imagesPath} from '../data/config.json';
 export default function About() {
   return (
     <>
-      <Hero imagePath={`${imagesPath}about/about-hero.jpg`}>
+      <Hero imagePath={`${imagesPath}about/about-hero.jpg`} theme="short">
         <h1>About</h1>
       </Hero>
       <Section>

@@ -10,6 +10,14 @@
   border-bottom: 3px solid var(--highlight);
 }
 
+.heroShort {
+  min-height: 150px;
+  height: clamp(150px, 20vh, 250px);
+}
+
+.heroTall {
+}
+
 .heroImage {
   display: block;
   position: absolute;
@@ -49,6 +57,10 @@
 @media (--break-lg) {
   .hero {
     height: clamp(350px, 70vh, 700px);
+  }
+  .heroShort {
+    min-height: 150px;
+    height: clamp(150px, 20vh, 250px);
   }
 
   .heroContent {

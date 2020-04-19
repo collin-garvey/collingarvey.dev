@@ -8,7 +8,7 @@ import styles from '../styles/work.module.css';
 const Work: React.SFC = () => {
   return (
     <>
-      <Hero>
+      <Hero theme="short">
         <h1>Work</h1>
       </Hero>
       <Section width="wide">
