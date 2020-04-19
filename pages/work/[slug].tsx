@@ -40,6 +40,18 @@ export default function Post({content, data}) {
                 );
               })}
             </div>
+            {frontmatter.liveUrl && (
+              <>
+                <h3>URL</h3>
+                <div className={styles.tagList}>
+                  <span className={styles.tag}>
+                    <a href={frontmatter.liveUrl} target="_blank">
+                      {frontmatter.liveUrl}
+                    </a>
+                  </span>
+                </div>
+              </>
+            )}
             <Carousel images={carouselImages} />
           </div>
           <div className={styles.postContent}>

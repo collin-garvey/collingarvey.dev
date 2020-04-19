@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
-import Project from '../components/WorkCard';
+import WorkCard from '../components/WorkCard';
 
 import styles from '../styles/work.module.css';
 
@@ -13,7 +13,11 @@ const Work: React.SFC = () => {
       </Hero>
       <Section width="wide">
         <div className={styles.workGrid}>
-          <Project slug="fb-connectivity" title="Facebook Connectivity App" />
+          <WorkCard slug="fb-connectivity" title="Facebook Connectivity App" />
+          <WorkCard
+            slug="oculus-medium-website"
+            title="Oculus Medium Website"
+          />
         </div>
       </Section>
     </>

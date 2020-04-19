@@ -3,12 +3,12 @@ import Link from 'next/link';
 import styles from './WorkCard.module.css';
 import {imagesPath} from '../data/config.json';
 
-interface IProjectProps {
+interface IWorkCardProps {
   slug: string;
   title: string;
 }
 
-const Project: React.SFC<IProjectProps> = props => {
+const WorkCard: React.SFC<IWorkCardProps> = props => {
   return (
     <div className={styles.workCard}>
       <Link href={`/work/${props.slug}`}>
@@ -26,4 +26,4 @@ const Project: React.SFC<IProjectProps> = props => {
   );
 };
 
-export default Project;
+export default WorkCard;

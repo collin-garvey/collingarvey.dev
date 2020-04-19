@@ -2,8 +2,8 @@
 title: 'Oculus Medium Website'
 date: '2020-04-15'
 mainImage: 'work/oculus-medium/oc-medium-landing.jpg'
-featuredBlurb: 'I helped Oculus Medium modernize their website\'s front-end and added some cool new features to help visualize VR sculptures on the web.'
-liveURL: 'https://oculus.com/medium'
+featuredBlurb: "I helped Oculus Medium modernize their website's front-end and added some cool new features to help visualize VR sculptures on the web."
+liveUrl: 'https://oculus.com/medium'
 images:
   - 'work/oculus-medium/oc-medium-landing.jpg'
   - 'work/oculus-medium/oc-medium-landing.jpg'
