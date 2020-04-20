@@ -36,6 +36,9 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+main {
+  min-height: 100vh;
+}
 
 body {
   margin: 0;
@@ -83,7 +86,8 @@ a:hover {
 p a[href],
 h1 a[href],
 h2 a[href] {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--tertiary);
   text-underline-offset: 4px;
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;

@@ -5,7 +5,7 @@ date: '2020-03-30'
 
 Let's talk about an issue that I consider to be pretty prevalent in our industry—estimation of development effort.
 
-I've been in the web development industry for over ten years now and a decent chunk of that time has been spent in agency-type companies where the types of projects and clients vary; sometimes wildly. The upside to companies like these are that you tend to get experience across a broad set of technologies and tools. With that, however, comes the inevitable period of work estimation; and when you're dealing with many different types of technologies it often adds some extra uncertainty around your estimates.
+I've been in the web development industry for over twelve years now and a decent chunk of that time has been spent in agency-type companies where the types of projects and clients vary; sometimes wildly. The upside to companies like these are that you tend to get experience across a broad set of technologies and tools. With that, however, comes the inevitable period of work estimation; and when you're dealing with many different types of technologies it often adds some extra uncertainty around your estimates.
 
 I'm going to talk about my mental model for effort estimation which addresses the most common issues developers have when estimating work, which in my experience are:
 

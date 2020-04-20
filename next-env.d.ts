@@ -23,3 +23,7 @@ declare module '*.module.scss' {
   const content: {[className: string]: string};
   export default content;
 }
+
+declare module '@icons-pack/react-simple-icons/lib/Linkedin';
+declare module '@icons-pack/react-simple-icons/lib/Twitter';
+declare module '@icons-pack/react-simple-icons/lib/Github';

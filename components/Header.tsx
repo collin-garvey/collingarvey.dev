@@ -16,7 +16,7 @@ const Header: React.SFC = () => {
       <div className={styles.headerContent}>
         <div className={styles.masthead}>
           <Link href="/">
-            <a>{'CG'}</a>
+            <a>{'COLLIN G.'}</a>
           </Link>
         </div>
         <nav className={styles.nav}>

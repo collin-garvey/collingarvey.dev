@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/collin-garvey/personal-2020#readme",
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^2.7.1",
     "@types/three": "^0.103.2",
     "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",

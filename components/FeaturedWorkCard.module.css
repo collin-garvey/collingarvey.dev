@@ -1,7 +1,7 @@
 .FeaturedProjectCard {
+  display: flex;
 }
 
-.FeaturedProjectCard img {
-  display: block;
-  width: 100%;
+.imageWrap {
+  margin: 0 2rem 0 0;
 }

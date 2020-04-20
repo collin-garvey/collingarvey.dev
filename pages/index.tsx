@@ -6,7 +6,7 @@ import Section from '../components/Section';
 import {setupScene, destroyScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
 
-import styles from './Index.module.css';
+import styles from '../styles/Index.module.css';
 
 const Index = props => {
   // Instantiate the ThreeJS scene
@@ -24,9 +24,13 @@ const Index = props => {
     <>
       <div id="heroScene" className={styles.threeScene} />
       <HomeHero />
-      <Section theme="light">
+      <Section>
+        <h3>A Bit About Me</h3>
         <p>
-          I've built neat things for{' '}
+          Over my 12+ years of experience, I've uncovered a passion for
+          componentized web interfaces and highly-engaging creative experiences
+          that take advantage of the best tech the web has to offer. I've built
+          neat things for{' '}
           <a href="https://oculus.com" rel="noopener" target="_blank">
             Oculus VR
           </a>
@@ -38,22 +42,16 @@ const Index = props => {
           <a href="https://prpl.rs" rel="noopener" target="_blank">
             Purple Rock Scissors
           </a>{' '}
-          where I previously served as Development Manager. I've done pretty
-          much everything web related over my 12 years of experience, but I
-          enjoy front-end development the most.
-        </p>
-        <p>
-          I'm really into React and isomorphic JS, in general. I also dabble in{' '}
-          <a
-            href="https://codepen.io/collin-garvey"
-            rel="noopener"
-            target="_blank"
-          >
-            creative coding
-          </a>{' '}
-          when I'm feeling spicy.
+          where I previously served as Development Manager.
         </p>
       </Section>
+      <div className={styles.sectionBump}>
+        <Link href="/about">
+          <a>
+            Read More <span>&#10097;</span>
+          </a>
+        </Link>
+      </div>
       <Section>
         <h3>Featured Project</h3>
         <FeaturedWorkCard
@@ -61,13 +59,13 @@ const Index = props => {
           workObject={featuredWork}
         />
       </Section>
-      <Section theme="light">
-        <p>
-          <Link href="/work">
-            <a>View all work →</a>
-          </Link>
-        </p>
-      </Section>
+      <div className={styles.sectionBump}>
+        <Link href="/work">
+          <a>
+            View All Work <span>&#10097;</span>
+          </a>
+        </Link>
+      </div>
     </>
   );
 };

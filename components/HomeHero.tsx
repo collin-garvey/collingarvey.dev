@@ -1,16 +1,37 @@
 import React from 'react';
 import Section from '../components/Section';
-
+import Github from '@icons-pack/react-simple-icons/lib/Github';
+import Twitter from '@icons-pack/react-simple-icons/lib/Twitter';
+import Codepen from '@icons-pack/react-simple-icons/lib/Codepen';
+import Linkedin from '@icons-pack/react-simple-icons/lib/Linkedin';
 import styles from './HomeHero.module.css';
+
+const ICON_COLOR = '#94a1b2';
 
 const Hero: React.SFC = () => {
   return (
-    <Section>
+    <div className={styles.HomeHero}>
       <div className={styles.heroContent}>
         <h1>Collin Garvey</h1>
-        <span>Web Engineer with a love for Front-End and Creative Tech</span>
+        <span>
+          Front-End Engineer focused on web UIs and creative experiences
+        </span>
+        <nav className={styles.socials}>
+          <a href="https://github.com/collin-garvey">
+            <Github color={ICON_COLOR} size={24} />
+          </a>
+          <a href="https://www.twitter.com/collingarvey">
+            <Twitter color={ICON_COLOR} size={24} />
+          </a>
+          <a href="https://codepen.io/collin-garvey">
+            <Codepen color={ICON_COLOR} size={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/collingarvey/">
+            <Linkedin color={ICON_COLOR} size={24} />
+          </a>
+        </nav>
       </div>
-    </Section>
+    </div>
   );
 };
 
