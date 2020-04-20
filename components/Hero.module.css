@@ -8,6 +8,7 @@
   width: 100%;
   overflow: hidden;
   border-bottom: 3px solid var(--highlight);
+  transition: all 250ms ease-in-out;
 }
 
 .heroShort {

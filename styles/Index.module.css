@@ -12,12 +12,7 @@
 
 .sectionBump {
   width: 100%;
-  background-image: linear-gradient(
-    90deg,
-    #16161a 0%,
-    rgba(255, 255, 255, 0.02) 50%,
-    #161616 100%
-  );
+  background-color: rgba(255, 255, 255, 0.02);
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.02);
   transition: border 0.2s ease-in-out;
