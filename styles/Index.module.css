@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-@media (--break-md) {
+@media screen and (min-width: 768px) {
   .threeScene {
     height: 650px;
   }
