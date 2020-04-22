@@ -150,40 +150,17 @@ export const setupScene = () => {
   composer.addPass(asciiPass);
 
   // Mouse Tracking
-  const mousePositionNormalized = new THREE.Vector2(0, 0);
+  const pointerPositionNormalized = new THREE.Vector2(0, 0);
 
-  function mousemove(e) {
-    mousePositionNormalized.set(
+  function pointermove(e: PointerEvent) {
+    pointerPositionNormalized.set(
       e.clientX / rootElem.clientWidth,
       e.clientY / rootElem.clientHeight,
     );
   }
-  window.addEventListener('mousemove', mousemove);
-
-  // Device Orientation Tracking
-  const orientationNormalized = new THREE.Vector2(0, 0);
-  function handleOrientation(event) {
-    let x = event.alpha;
-    let y = event.beta;
-
-    if (x > 90) {
-      x = 90;
-    }
-    if (x < -90) {
-      x = -90;
-    }
-
-    x += 90;
-    y += 90;
-
-    orientationNormalized.set(
-      x / (rootElem.clientWidth / 2),
-      y / (rootElem.clientHeight / 2),
-    );
-  }
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', handleOrientation);
-  }
+  document
+    .getElementById('heroScene')
+    .addEventListener('pointermove', pointermove);
 
   // Handle Window Resize
   resizeRenderer = () => {
@@ -212,13 +189,8 @@ export const setupScene = () => {
   function renderScene() {
     const delta = clock.getDelta();
 
-    if (window.DeviceOrientationEvent) {
-      modelContainer.rotation.y = orientationNormalized.x - 0.5;
-      modelContainer.rotation.x = (orientationNormalized.y - 0.5) / 3;
-    } else {
-      modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
-      modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 3;
-    }
+    modelContainer.rotation.y = pointerPositionNormalized.x - 0.5;
+    modelContainer.rotation.x = (pointerPositionNormalized.y - 0.5) / 3;
 
     renderer.setRenderTarget(lowResRenderTarget);
     renderer.render(mainScene, mainCamera);
