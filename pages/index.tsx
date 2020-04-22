@@ -1,11 +1,10 @@
-import {useEffect} from 'react';
 import Link from 'next/link';
+import {useEffect} from 'react';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
-import {setupScene, destroyScene} from '../lib/Hero3D';
+import {destroyScene, setupScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
-
 import styles from '../styles/Index.module.css';
 
 const Index = props => {

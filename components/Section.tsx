@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import React from 'react';
 import styles from './Section.module.css';
-import classNames from 'classnames';
 
 interface SectionProps {
   theme?: 'light' | 'dark';

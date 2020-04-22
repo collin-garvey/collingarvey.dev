@@ -9,31 +9,3 @@
     height: 650px;
   }
 }
-
-.sectionBump {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.02);
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  transition: border 0.2s ease-in-out;
-}
-
-.sectionBump:hover {
-  bacground: rgba(255, 255, 255, 0.1);
-  border-top: 1px solid var(--highlight);
-}
-
-.sectionBump a {
-  display: block;
-  padding: 1rem 2rem;
-  font-family: 'teko';
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.sectionBump a span {
-  position: relative;
-  top: -2px;
-  font-size: 0.9rem;
-}

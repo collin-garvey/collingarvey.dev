@@ -27,3 +27,4 @@ declare module '*.module.scss' {
 declare module '@icons-pack/react-simple-icons/lib/Linkedin';
 declare module '@icons-pack/react-simple-icons/lib/Twitter';
 declare module '@icons-pack/react-simple-icons/lib/Github';
+declare module '@icons-pack/react-simple-icons/lib/Codepen';

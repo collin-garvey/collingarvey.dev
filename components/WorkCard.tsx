@@ -1,7 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
-import styles from './WorkCard.module.css';
+import React from 'react';
 import {imagesPath} from '../data/config.json';
+import styles from './WorkCard.module.css';
 
 interface IWorkCardProps {
   slug: string;

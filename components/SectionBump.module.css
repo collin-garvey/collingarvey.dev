@@ -1,0 +1,27 @@
+.sectionBump {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: border 0.2s ease-in-out;
+}
+
+.sectionBump:hover {
+  bacground: rgba(255, 255, 255, 0.1);
+}
+
+.sectionBump a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'teko';
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sectionBump a span {
+  position: absolute;
+  top: -2px;
+  right: -1rem;
+  font-size: 0.9rem;
+  margin: 0 0 0 1rem;
+}

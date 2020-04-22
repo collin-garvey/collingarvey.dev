@@ -1,7 +1,7 @@
+import classnames from 'classnames';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import styles from './Header.module.css';
-import classnames from 'classnames';
 
 const Header: React.SFC = () => {
   const router = useRouter();

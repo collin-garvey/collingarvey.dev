@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
 import classNames from 'classnames';
-
+import Link from 'next/link';
+import React from 'react';
 import styles from './LinkButton.module.css';
 
 interface ILinkButtonProps {

@@ -1,6 +1,6 @@
+import cx from 'classnames';
 import React from 'react';
 import styles from './Hero.module.css';
-import cx from 'classnames';
 interface IHeroProps {
   imagePath?: string;
   theme?: 'short' | 'tall';

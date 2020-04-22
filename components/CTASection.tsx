@@ -1,8 +1,7 @@
 import React from 'react';
-import Section from './Section';
-import LinkButton from './LinkButton';
-
 import styles from './CTASection.module.css';
+import LinkButton from './LinkButton';
+import Section from './Section';
 
 const CTASection = () => {
   return (

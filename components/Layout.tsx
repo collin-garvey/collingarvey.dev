@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import config from '../data/config.json';
-import Header from './Header';
-import Footer from './Footer';
 import React from 'react';
+import config from '../data/config.json';
+import Footer from './Footer';
+import Header from './Header';
 
 const Layout: React.SFC = props => {
   return (
