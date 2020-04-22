@@ -4,6 +4,14 @@
   background-color: var(--background);
 }
 
+.section h3 {
+  text-align: center;
+}
+
+.section + .section {
+  padding: 0 0 5rem 0;
+}
+
 .sectionLight {
   background-color: var(--background-light);
 }

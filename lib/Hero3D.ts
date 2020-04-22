@@ -158,9 +158,7 @@ export const setupScene = () => {
       e.clientY / rootElem.clientHeight,
     );
   }
-  document
-    .getElementById('heroScene')
-    .addEventListener('pointermove', pointermove);
+  document.addEventListener('pointermove', pointermove);
 
   // Handle Window Resize
   resizeRenderer = () => {

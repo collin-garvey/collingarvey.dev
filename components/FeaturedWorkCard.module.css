@@ -1,7 +1,22 @@
 .FeaturedProjectCard {
   display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 0 2rem 0;
+}
+.FeaturedProjectCard h3 {
+  text-align: left;
 }
 
 .imageWrap {
-  margin: 0 2rem 0 0;
+  margin: 0 0 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .FeaturedProjectCard {
+    flex-direction: row;
+  }
+  .imageWrap {
+    margin: 0 2rem 0 0;
+  }
 }
