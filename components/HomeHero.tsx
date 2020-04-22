@@ -1,5 +1,4 @@
 import React from 'react';
-import Section from '../components/Section';
 import Github from '@icons-pack/react-simple-icons/lib/Github';
 import Twitter from '@icons-pack/react-simple-icons/lib/Twitter';
 import Codepen from '@icons-pack/react-simple-icons/lib/Codepen';

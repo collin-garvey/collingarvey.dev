@@ -1,21 +1,12 @@
 import * as THREE from 'three';
 import debounce from 'lodash.debounce';
-
-import AdditiveShader from './shaders/Additive';
 import ASCIIShader from './shaders/ASCII';
-import RippleShader from './shaders/Ripple';
-import ScanShader from './shaders/Scan';
-import VertexLitParticle from './shaders/VertexLitParticle';
-import VolumetricLightScattering from './shaders/VolumetricLightScattering';
-import VolumetricLightCylinder from './shaders/VolumetricLightCylinder';
 
 let mainScene: THREE.Scene,
   mainCamera: THREE.PerspectiveCamera,
-  ambientLight: THREE.AmbientLight,
   backLight: THREE.PointLight,
   fillLight: THREE.PointLight,
   keyLight: THREE.PointLight,
-  geometry: THREE.BoxGeometry,
   renderer: THREE.WebGLRenderer,
   reqAnimID: number,
   frustumHeight: number,
@@ -34,8 +25,6 @@ export const setupScene = () => {
     .EffectComposer;
   const ShaderPass = require('three/examples/jsm/postprocessing/ShaderPass')
     .ShaderPass;
-  const RenderPass = require('three/examples/jsm/postprocessing/RenderPass')
-    .RenderPass;
 
   mainScene = new THREE.Scene();
 
@@ -47,10 +36,10 @@ export const setupScene = () => {
     0.1,
     20,
   );
-  mainCamera.position.z = 8;
+  mainCamera.position.z = 6;
 
   // Point Lights
-  backLight = new THREE.PointLight(0x7f00ff, 5, 0);
+  backLight = new THREE.PointLight(0xffffff, 5, 0);
   backLight.position.set(-5, 5, -5);
   mainScene.add(backLight);
 
@@ -58,7 +47,7 @@ export const setupScene = () => {
   fillLight.position.set(-5, 0, 5);
   mainScene.add(fillLight);
 
-  keyLight = new THREE.PointLight(0x7f00ff, 10, 0);
+  keyLight = new THREE.PointLight(0xffffff, 3, 0);
   keyLight.position.set(5, 0, 0);
   mainScene.add(keyLight);
 
@@ -84,8 +73,9 @@ export const setupScene = () => {
     console.error,
   );
 
-  // ASCII Effect
+  const composer = new EffectComposer(renderer);
 
+  // ASCII Effect
   const FONT_MAP_SIZE = new THREE.Vector2(64, 64);
   const FONT_CHAR_SIZE = new THREE.Vector2(8, 8);
 
@@ -118,8 +108,6 @@ export const setupScene = () => {
   const lowResDepthTexture = new THREE.DepthTexture(0, 0);
   lowResDepthTexture.type = THREE.UnsignedShortType;
   lowResRenderTarget.depthTexture = lowResDepthTexture;
-
-  const finalComposer = new EffectComposer(renderer);
 
   const asciiPass = new ShaderPass(ASCIIShader());
   asciiPass.uniforms.tLowRes.value = lowResRenderTarget.texture;
@@ -159,8 +147,9 @@ export const setupScene = () => {
 
   updateAsciiRenderSize();
 
-  finalComposer.addPass(asciiPass);
+  composer.addPass(asciiPass);
 
+  // Mouse Tracking
   const mousePositionNormalized = new THREE.Vector2(0, 0);
 
   function mousemove(e) {
@@ -199,13 +188,13 @@ export const setupScene = () => {
     const delta = clock.getDelta();
 
     modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
-    modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 2;
+    modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 3;
 
     renderer.setRenderTarget(lowResRenderTarget);
     renderer.render(mainScene, mainCamera);
 
     renderer.setRenderTarget(null);
-    finalComposer.render();
+    composer.render();
 
     reqAnimID = requestAnimationFrame(renderScene);
   }

@@ -44,28 +44,29 @@ const Index = props => {
           </a>{' '}
           where I previously served as Development Manager.
         </p>
+        <div className={styles.sectionBump}>
+          <Link href="/about">
+            <a>
+              Read More <span>&#10097;</span>
+            </a>
+          </Link>
+        </div>
       </Section>
-      <div className={styles.sectionBump}>
-        <Link href="/about">
-          <a>
-            Read More <span>&#10097;</span>
-          </a>
-        </Link>
-      </div>
+
       <Section>
         <h3>Featured Project</h3>
         <FeaturedWorkCard
           slug={siteConfig.featuredWorkSlug}
           workObject={featuredWork}
         />
+        <div className={styles.sectionBump}>
+          <Link href="/work">
+            <a>
+              View All Work <span>&#10097;</span>
+            </a>
+          </Link>
+        </div>
       </Section>
-      <div className={styles.sectionBump}>
-        <Link href="/work">
-          <a>
-            View All Work <span>&#10097;</span>
-          </a>
-        </Link>
-      </div>
     </>
   );
 };

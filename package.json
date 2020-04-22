@@ -33,6 +33,7 @@
     "@icons-pack/react-simple-icons": "^2.7.1",
     "@types/three": "^0.103.2",
     "classnames": "^2.2.6",
+    "fslightbox-react": "^1.4.9",
     "gray-matter": "^4.0.2",
     "lodash.debounce": "^4.0.8",
     "next": "^9.3.4",
@@ -47,6 +48,7 @@
     "react-svg": "^11.0.18",
     "remark": "^11.0.2",
     "remark-html": "^11.0.1",
+    "scroll-out": "^2.2.8",
     "three": "^0.115.0"
   },
   "devDependencies": {
