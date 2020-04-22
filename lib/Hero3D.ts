@@ -160,6 +160,31 @@ export const setupScene = () => {
   }
   window.addEventListener('mousemove', mousemove);
 
+  // Device Orientation Tracking
+  const orientationNormalized = new THREE.Vector2(0, 0);
+  function handleOrientation(event) {
+    let x = event.alpha;
+    let y = event.beta;
+
+    if (x > 90) {
+      x = 90;
+    }
+    if (x < -90) {
+      x = -90;
+    }
+
+    x += 90;
+    y += 90;
+
+    orientationNormalized.set(
+      x / (rootElem.clientWidth / 2),
+      y / (rootElem.clientHeight / 2),
+    );
+  }
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', handleOrientation);
+  }
+
   // Handle Window Resize
   resizeRenderer = () => {
     renderer.setSize(rootElem.clientWidth, rootElem.clientHeight);
@@ -187,8 +212,13 @@ export const setupScene = () => {
   function renderScene() {
     const delta = clock.getDelta();
 
-    modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
-    modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 3;
+    if (window.DeviceOrientationEvent) {
+      modelContainer.rotation.y = orientationNormalized.x - 0.5;
+      modelContainer.rotation.x = (orientationNormalized.y - 0.5) / 3;
+    } else {
+      modelContainer.rotation.y = mousePositionNormalized.x - 0.5;
+      modelContainer.rotation.x = (mousePositionNormalized.y - 0.5) / 3;
+    }
 
     renderer.setRenderTarget(lowResRenderTarget);
     renderer.render(mainScene, mainCamera);
