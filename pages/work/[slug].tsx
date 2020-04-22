@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 import {imagesPath} from '../../data/config.json';
-import Carousel from '../../components/Carousel';
 import CTASection from '../../components/CTASection';
 import FsLightbox from 'fslightbox-react';
 
