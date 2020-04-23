@@ -22,7 +22,7 @@ const getBuildFilesRecursive = (dir, ignores = []) => {
 const generateFileKey = fileName => {
   const s3OjbectPath = fileName.split('/public/static/')[1];
 
-  return `next-assets/_next/${s3OjbectPath}`;
+  return `public/static/${s3OjbectPath}`;
 };
 
 const s3 = new AWS.S3();
