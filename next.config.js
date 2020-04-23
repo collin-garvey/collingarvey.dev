@@ -7,5 +7,7 @@ module.exports = {
     });
     return config;
   },
-  assetPrefix: `https://${process.env.CG_WEB_S3_BUCKET_NAME}.s3.amazonaws.com`,
+  assetPrefix: process.env.CG_WEB_S3_BUCKET_NAME
+    ? `https://${process.env.CG_WEB_S3_BUCKET_NAME}.s3.amazonaws.com`
+    : '',
 };
