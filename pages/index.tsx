@@ -18,6 +18,8 @@ const Index = props => {
     };
   }, []);
 
+  console.log(process.env.CG_WEB_CLOUDFRONT_DOMAIN);
+
   const {featuredWork, config} = props;
 
   return (
