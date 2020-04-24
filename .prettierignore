@@ -5,3 +5,4 @@ build
 public
 .cache
 .next
+.now
