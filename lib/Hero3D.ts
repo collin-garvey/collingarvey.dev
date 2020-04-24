@@ -1,5 +1,6 @@
-import * as THREE from 'three';
 import debounce from 'lodash.debounce';
+import * as THREE from 'three';
+import config from '../data/config';
 import ASCIIShader from './shaders/ASCII';
 
 let mainScene: THREE.Scene,
@@ -59,7 +60,7 @@ export const setupScene = () => {
 
   // Load 3D Model
   const loader = new GLTFLoader();
-  const modelFile = '/static/3d/coll-garvey-face-scan.glb';
+  const modelFile = `${config.staticPath}3d/coll-garvey-face-scan.glb`;
 
   const modelContainer = new THREE.Group();
   mainScene.add(modelContainer);
@@ -80,7 +81,7 @@ export const setupScene = () => {
   const FONT_CHAR_SIZE = new THREE.Vector2(8, 8);
 
   const fontLoader = new THREE.TextureLoader();
-  const fontFile = '/static/images/collin-font.png';
+  const fontFile = `${config.imagesPath}collin-font.png`;
   const tFont = fontLoader.load(fontFile);
   tFont.minFilter = THREE.NearestFilter;
   tFont.magFilter = THREE.NearestFilter;

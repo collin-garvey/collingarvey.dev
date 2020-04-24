@@ -3,6 +3,7 @@ import {useEffect} from 'react';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
+import config from '../data/config';
 import {destroyScene, setupScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
 import styles from '../styles/Index.module.css';
@@ -17,14 +18,14 @@ const Index = props => {
     };
   }, []);
 
-  const {featuredWork, siteConfig} = props;
+  const {featuredWork, config} = props;
 
   return (
     <>
       <div id="heroScene" className={styles.threeScene} />
       <HomeHero />
       <Section>
-        <h3>A Bit About Me</h3>
+        <h2>A Bit About Me</h2>
         <p>
           Over my 12+ years of experience, I've uncovered a passion for
           componentized web interfaces and highly-engaging creative experiences
@@ -53,9 +54,9 @@ const Index = props => {
       </Section>
 
       <Section>
-        <h3>Featured Project</h3>
+        <h2>Featured Project</h2>
         <FeaturedWorkCard
-          slug={siteConfig.featuredWorkSlug}
+          slug={config.featuredWorkSlug}
           workObject={featuredWork}
         />
         <div className={styles.sectionBump}>
@@ -71,12 +72,12 @@ const Index = props => {
 };
 
 Index.getInitialProps = async () => {
-  const siteConfig = await import('../data/config.json');
-  const featuredWork = await getWorkBySlug(siteConfig.featuredWorkSlug);
+  // TODO - Fix this "any" type
+  const featuredWork = await getWorkBySlug(config.featuredWorkSlug);
 
   return {
     featuredWork,
-    siteConfig,
+    config,
   };
 };
 

@@ -1,8 +1,8 @@
-import React from 'react';
+import matter from 'gray-matter';
 import Link from 'next/link';
+import React from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
-import matter from 'gray-matter';
 
 interface IPostLinkProps {
   slug: string;
@@ -48,7 +48,7 @@ const Blog = props => {
 };
 
 Blog.getInitialProps = async () => {
-  const siteConfig = await import('../data/config.json');
+  const siteConfig = await import('../data/config.js');
   const posts = (context => {
     const keys = context.keys();
     const values = keys.map(context);

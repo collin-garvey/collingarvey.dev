@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   poweredByHeader: false,
   webpack: config => {
@@ -7,7 +9,9 @@ module.exports = {
     });
     return config;
   },
-  assetPrefix: process.env.CG_WEB_S3_BUCKET_NAME
-    ? `https://${process.env.CG_WEB_S3_BUCKET_NAME}.s3.amazonaws.com`
-    : '',
+  env: {
+    assetPrefix: process.env.CG_WEB_CLOUDFRONT_DOMAIN
+      ? `https://${process.env.CG_WEB_CLOUDFRONT_DOMAIN}`
+      : '',
+  },
 };

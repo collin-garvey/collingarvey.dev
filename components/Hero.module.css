@@ -7,7 +7,7 @@
   height: clamp(150px, 50vh, 350px);
   width: 100%;
   overflow: hidden;
-  border-bottom: 3px solid var(--highlight);
+  /* border-bottom: 3px solid var(--highlight); */
   transition: all 250ms ease-in-out;
 }
 

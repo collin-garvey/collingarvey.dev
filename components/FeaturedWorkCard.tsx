@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import LinkButton from './LinkButton';
-import styles from './FeaturedWorkCard.module.css';
-import {imagesPath} from '../data/config.json';
 import cx from 'classnames';
+import Link from 'next/link';
+import React from 'react';
+import config from '../data/config.js';
+import styles from './FeaturedWorkCard.module.css';
+import LinkButton from './LinkButton';
 
 interface IFeaturedWorkProps {
   slug: string;
@@ -17,18 +17,19 @@ interface IFeaturedWorkProps {
 
 const Project: React.SFC<IFeaturedWorkProps> = props => {
   const {workObject} = props;
+
   return (
     <div className={styles.FeaturedProjectCard}>
-      <div className={cx(styles.aspectContainer, styles.imageWrap)}>
-        <Link href={`/work/${props.slug}`}>
-          <a>
+      <Link href={`/work/${props.slug}`}>
+        <a>
+          <div className={cx(styles.aspectContainer, styles.imageWrap)}>
             <img
               className={styles.aspectContainer__inner}
-              src={`${imagesPath}${workObject.frontmatter.mainImage}`}
+              src={`${config.imagesPath}${workObject.frontmatter.mainImage}`}
             />
-          </a>
-        </Link>
-      </div>
+          </div>
+        </a>
+      </Link>
       <div className={styles.description}>
         <Link href={`/work/${props.slug}`}>
           <a>

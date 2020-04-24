@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import config from '../data/config.json';
+import config from '../data/config';
 import Footer from './Footer';
 import Header from './Header';
 
