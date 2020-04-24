@@ -47,7 +47,7 @@ const Blog = props => {
   );
 };
 
-Blog.getInitialProps = async () => {
+Blog.getStaticProps = async () => {
   const siteConfig = await import('../data/config.js');
   const posts = (context => {
     const keys = context.keys();

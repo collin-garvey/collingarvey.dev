@@ -23,7 +23,7 @@ const Work = props => {
   );
 };
 
-Work.getInitialProps = async () => {
+Work.getStaticProps = async () => {
   const siteConfig = await import('../data/config.js');
   const workPosts = await getAllWork();
 

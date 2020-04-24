@@ -37,7 +37,7 @@ const Project: React.SFC<IFeaturedWorkProps> = props => {
           </a>
         </Link>
         <p>{workObject.frontmatter.featuredBlurb}</p>
-        <LinkButton theme="highlight" href="/work/">
+        <LinkButton theme="highlight" href={`/work/${props.slug}`}>
           View Project
         </LinkButton>
       </div>
