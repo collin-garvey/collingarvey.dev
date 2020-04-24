@@ -1,8 +1,8 @@
 .workCard {
   position: relative;
   display: flex;
+  flex-direction: column;
   background: var(--background-light);
-  padding: 0.25rem;
   color: var(--paragraph);
 }
 
@@ -12,8 +12,6 @@
 }
 
 .workCardImage {
-  flex-shrink: 1;
-  width: 50%;
 }
 
 .workCardImage img {
@@ -21,11 +19,10 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .workCardDescription {
-  width: 50%;
-  flex-shrink: 1;
   padding: 1rem;
 }
 
@@ -35,6 +32,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .workCard {
+    flex-direction: row;
+  }
+
+  .workCardImage {
+  }
+
   .workCardDescription {
     padding: 2rem;
   }
