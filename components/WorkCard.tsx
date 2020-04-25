@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import config from '../data/config';
 import {TWorkPost} from '../lib/api';
-import {Tag, TagList} from './Tag';
+import {TagList} from './TagList';
 import styles from './WorkCard.module.css';
 
 interface IWorkCardProps {
@@ -20,9 +20,7 @@ const WorkCard: React.SFC<IWorkCardProps> = props => {
         </div>
         <div className={styles.workCardDescription}>
           <h3>{workObj.title}</h3>
-          <TagList>
-            <Tag>{workObj.type}</Tag>
-          </TagList>
+          <TagList tags={[workObj.type]} />
           <p>{workObj.featuredBlurb}</p>
         </div>
       </a>

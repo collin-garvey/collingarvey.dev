@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CTASection from '../../components/CTASection';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
-import {Tag, TagList} from '../../components/Tag';
+import {TagList} from '../../components/TagList';
 import config from '../../data/config.js';
 import {getAllPosts, getPostBySlug, TWorkPost} from '../../lib/api';
 import styles from '../../styles/WorkPost.module.css';
@@ -24,19 +24,9 @@ export default function Post({post}) {
         <article className={styles.WorkPost}>
           <div className={styles.sidebar}>
             <h3>Project Type</h3>
-            <TagList>
-              <Tag>{post.type}</Tag>
-            </TagList>
+            <TagList tags={[post.type]} />
             <h3>Technologies</h3>
-            <div className={styles.tagList}>
-              {post.tags.map((tag: string, index: number) => {
-                return (
-                  <span className={styles.tag} key={index}>
-                    {tag}
-                  </span>
-                );
-              })}
-            </div>
+            <TagList tags={post.tags} />
             {post.liveUrl && (
               <>
                 <h3>URL</h3>
