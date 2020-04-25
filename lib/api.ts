@@ -39,13 +39,20 @@ export function getPostSlugs(postType: TPostType) {
   return fs.readdirSync(getPostsPath(postType));
 }
 
-export function getPostBySlug(postType: TPostType, slug: string, fields = []) {
+export function getPostBySlug(
+  postType: TPostType,
+  slug: string,
+  fields = [],
+): TPost {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(getPostsPath(postType), `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const {data, content} = matter(fileContents);
 
-  const items = {};
+  const items: TPost = {
+    title: '',
+    slug: '',
+  };
 
   // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
@@ -64,7 +71,7 @@ export function getPostBySlug(postType: TPostType, slug: string, fields = []) {
   return items;
 }
 
-export function getAllPosts(postType: TPostType, fields = []) {
+export function getAllPosts(postType: TPostType, fields = []): TPost[] {
   const slugs = getPostSlugs(postType);
   return slugs.map(slug => getPostBySlug(postType, slug, fields));
 }

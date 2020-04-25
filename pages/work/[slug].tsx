@@ -6,7 +6,7 @@ import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 import {Tag, TagList} from '../../components/Tag';
 import config from '../../data/config.js';
-import {getAllPosts, getPostBySlug} from '../../lib/api';
+import {getAllPosts, getPostBySlug, TWorkPost} from '../../lib/api';
 import styles from '../../styles/WorkPost.module.css';
 
 export default function Post({post}) {
@@ -63,8 +63,9 @@ export default function Post({post}) {
 }
 
 export async function getStaticProps({params}) {
-  const post: any = getPostBySlug('work', params.slug, [
+  const post: TWorkPost = getPostBySlug('work', params.slug, [
     'title',
+    'slug',
     'date',
     'content',
     'mainImage',
@@ -85,7 +86,7 @@ export async function getStaticProps({params}) {
 }
 
 export async function getStaticPaths() {
-  const posts: any = getAllPosts('work', ['slug']);
+  const posts: TWorkPost[] = getAllPosts('work', ['slug']);
 
   return {
     paths: posts.map(post => {

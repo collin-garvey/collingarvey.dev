@@ -55,7 +55,6 @@ const Index = props => {
 };
 
 Index.getInitialProps = async () => {
-  // TODO - Fix this "any" type
   const featuredWork = await getWorkBySlug(config.featuredWorkSlug);
 
   return {

@@ -1,30 +1,57 @@
-import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
+import {getAllPosts, getPostBySlug, TPost} from '../../lib/api';
 import styles from '../../styles/Post.module.css';
 
-export default function Post({content, data}) {
-  const frontmatter = data;
+interface IPostProps {
+  post: TPost;
+}
 
+const Post: React.SFC<IPostProps> = props => {
   return (
     <>
       <Hero>
-        <h1>{frontmatter.title}</h1>
+        <h1>{props.post.title}</h1>
       </Hero>
       <Section>
         <article className={styles.Post}>
-          <ReactMarkdown source={content} />
+          <ReactMarkdown source={props.post.content} />
         </article>
       </Section>
     </>
   );
+};
+
+export async function getStaticProps({params}) {
+  const post: TPost = getPostBySlug('blog', params.slug, [
+    'title',
+    'slug',
+    'content',
+  ]);
+
+  return {
+    props: {
+      post: {
+        ...post,
+      },
+    },
+  };
 }
 
-Post.getStaticProps = async context => {
-  const {slug} = context.query;
-  const content = await import(`../../_posts/${slug}.md`);
-  const data = matter(content.default);
+export async function getStaticPaths() {
+  const posts: TPost[] = getAllPosts('blog', ['slug']);
 
-  return {...data};
-};
+  return {
+    paths: posts.map(post => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
+}
+
+export default Post;
