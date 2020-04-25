@@ -23,9 +23,9 @@ const Header: React.SFC = () => {
           <Link href="/work">
             <a>Work</a>
           </Link>
-          {/* <Link href="/blog">
+          <Link href="/blog">
             <a>Blog</a>
-          </Link> */}
+          </Link>
           <Link href="/about">
             <a>About</a>
           </Link>

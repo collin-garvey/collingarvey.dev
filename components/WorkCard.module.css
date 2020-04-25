@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--background-light);
   color: var(--paragraph);
 }
 
@@ -12,6 +11,10 @@
 }
 
 .workCardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .workCardImage img {
@@ -23,7 +26,12 @@
 }
 
 .workCardDescription {
-  padding: 1rem;
+  position: relative;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+  margin: 45% auto 0;
+  background: var(--background);
+  z-index: 2;
 }
 
 .workCard h3 {
@@ -32,14 +40,4 @@
 }
 
 @media screen and (min-width: 768px) {
-  .workCard {
-    flex-direction: row;
-  }
-
-  .workCardImage {
-  }
-
-  .workCardDescription {
-    padding: 2rem;
-  }
 }
