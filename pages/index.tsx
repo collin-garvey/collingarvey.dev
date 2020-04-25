@@ -1,12 +1,13 @@
-import Link from 'next/link';
 import {useEffect} from 'react';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
+import SectionBump from '../components/SectionBump';
 import config from '../data/config';
 import {destroyScene, setupScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
 import styles from '../styles/Index.module.css';
+import ExternalLink from './../components/ExternalLink';
 
 const Index = props => {
   // Instantiate the ThreeJS scene
@@ -31,26 +32,14 @@ const Index = props => {
           componentized web interfaces and highly-engaging creative experiences
           that take advantage of the best tech the web has to offer. I've built
           neat things for{' '}
-          <a href="https://oculus.com" rel="noopener" target="_blank">
-            Oculus VR
-          </a>
-          ,{' '}
-          <a href="https://facebook.com" rel="noopener" target="_blank">
-            Facebook
-          </a>
-          , and{' '}
-          <a href="https://prpl.rs" rel="noopener" target="_blank">
+          <ExternalLink href="https://oculus.com">Oculus VR</ExternalLink>,{' '}
+          <ExternalLink href="https://facebook.com">Facebook</ExternalLink>, and{' '}
+          <ExternalLink href="https://prpl.rs">
             Purple Rock Scissors
-          </a>{' '}
+          </ExternalLink>{' '}
           where I previously served as Development Manager.
         </p>
-        <div className={styles.sectionBump}>
-          <Link href="/about">
-            <a>
-              Read More <span>&#10097;</span>
-            </a>
-          </Link>
-        </div>
+        <SectionBump href="/about">Read More</SectionBump>
       </Section>
 
       <Section>
@@ -59,13 +48,7 @@ const Index = props => {
           slug={config.featuredWorkSlug}
           workObject={featuredWork}
         />
-        <div className={styles.sectionBump}>
-          <Link href="/work">
-            <a>
-              View All Work <span>&#10097;</span>
-            </a>
-          </Link>
-        </div>
+        <SectionBump href="/work">View All Work</SectionBump>
       </Section>
     </>
   );

@@ -1,5 +1,6 @@
 ---
 title: 'Effort Estimation'
+slug: 'effort-estimation'
 date: '2020-03-30'
 ---
 

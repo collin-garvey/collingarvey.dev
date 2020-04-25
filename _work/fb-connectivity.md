@@ -1,6 +1,7 @@
 ---
 title: 'Facebook Connectivity Conference App'
 date: '2020-04-15'
+slug: 'fb-connectivity'
 mainImage: 'work/fbc-conference/fbc-conference.jpg'
 featuredBlurb: 'I created an in-person video exploration experience for the Facebook Connectivity team to use at the Telecom Infra Project Summit in 2019. Check it out!'
 liveURL: ''

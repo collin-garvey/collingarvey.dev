@@ -1,33 +1,29 @@
 import Link from 'next/link';
 import React from 'react';
 import config from '../data/config';
+import {TWorkPost} from '../lib/api';
 import {Tag, TagList} from './Tag';
 import styles from './WorkCard.module.css';
 
 interface IWorkCardProps {
-  workObj: {
-    document: {
-      [key: string]: any;
-    };
-    slug: string;
-  };
+  workObj: TWorkPost;
 }
 
 const WorkCard: React.SFC<IWorkCardProps> = props => {
-  const {data} = props.workObj.document;
+  const {workObj} = props;
 
   return (
-    <Link href={`/work/${props.workObj.slug}`}>
+    <Link href={`/work/${workObj.slug}`}>
       <a className={styles.workCard}>
         <div className={styles.workCardImage}>
-          <img src={`${config.imagesPath}${data.mainImage}`} />
+          <img src={`${config.imagesPath}${workObj.mainImage}`} />
         </div>
         <div className={styles.workCardDescription}>
-          <h3>{data.title}</h3>
+          <h3>{workObj.title}</h3>
           <TagList>
-            <Tag>{data.type}</Tag>
+            <Tag>{workObj.type}</Tag>
           </TagList>
-          <p>{data.featuredBlurb}</p>
+          <p>{workObj.featuredBlurb}</p>
         </div>
       </a>
     </Link>

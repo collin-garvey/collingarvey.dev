@@ -11,7 +11,7 @@ const SectionBump: React.SFC<ISectionBumpProps> = props => {
     <div className={styles.sectionBump}>
       <Link href={props.href}>
         <a>
-          View All Work <span>&#10097;</span>
+          {props.children} <span>&#10097;</span>
         </a>
       </Link>
     </div>

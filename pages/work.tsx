@@ -2,10 +2,14 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import WorkCard from '../components/WorkCard';
-import {getAllWork} from '../lib/workUtils';
+import {getAllPosts, TWorkPost} from '../lib/api';
 import styles from '../styles/work.module.css';
 
-const Work = props => {
+interface IWorkProps {
+  allWork: [TWorkPost];
+}
+
+const Work: React.SFC<IWorkProps> = props => {
   return (
     <>
       <Hero theme="short">
@@ -14,7 +18,7 @@ const Work = props => {
       <Section width="wide">
         <div className={styles.workGrid}>
           {props.allWork.length &&
-            props.allWork.map((post, key: number) => {
+            props.allWork.map((post: TWorkPost, key: number) => {
               return <WorkCard key={key} workObj={post} />;
             })}
         </div>
@@ -23,14 +27,25 @@ const Work = props => {
   );
 };
 
-Work.getStaticProps = async () => {
-  const siteConfig = await import('../data/config.js');
-  const workPosts = await getAllWork();
+export async function getStaticProps() {
+  const workPosts = getAllPosts('work', [
+    'title',
+    'date',
+    'slug',
+    'content',
+    'mainImage',
+    'featuredBlurb',
+    'liveURL',
+    'images',
+    'tags',
+    'type',
+  ]);
 
   return {
-    allWork: workPosts,
-    ...siteConfig,
+    props: {
+      allWork: workPosts,
+    },
   };
-};
+}
 
 export default Work;

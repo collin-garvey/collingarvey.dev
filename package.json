@@ -36,6 +36,7 @@
     "aws-sdk": "^2.663.0",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
     "fslightbox-react": "^1.4.9",
     "gray-matter": "^4.0.2",
     "lodash.debounce": "^4.0.8",

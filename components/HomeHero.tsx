@@ -1,5 +1,6 @@
 import Codepen from '@icons-pack/react-simple-icons/lib/Codepen';
 import Github from '@icons-pack/react-simple-icons/lib/Github';
+import Gmail from '@icons-pack/react-simple-icons/lib/Gmail';
 import Linkedin from '@icons-pack/react-simple-icons/lib/Linkedin';
 import Twitter from '@icons-pack/react-simple-icons/lib/Twitter';
 import React from 'react';
@@ -28,6 +29,9 @@ const Hero: React.SFC = () => {
           </a>
           <a href="https://www.linkedin.com/in/collingarvey/">
             <Linkedin color={ICON_COLOR} size={24} />
+          </a>
+          <a href="mailto:hello@collingarvey.dev">
+            <Gmail color={ICON_COLOR} size={24} />
           </a>
         </nav>
       </div>

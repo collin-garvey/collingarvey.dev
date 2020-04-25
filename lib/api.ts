@@ -2,18 +2,19 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import {join} from 'path';
 
-type TPostType = 'blog' | 'work';
+export type TPostType = 'blog' | 'work';
 
-type TPost = {
+export type TPost = {
   title: string;
   date?: string;
+  slug: string;
   mainImage?: string;
   featuredBlurb?: string;
   tags?: [string];
   content?: string;
 };
 
-type TWorkPost = TPost & {
+export type TWorkPost = TPost & {
   type?: string;
   images?: [string];
   liveURL?: string;
@@ -34,7 +35,7 @@ export function getPostsPath(postType: TPostType): string {
   return join(process.cwd(), folder);
 }
 
-export function getPostSlugs(postType) {
+export function getPostSlugs(postType: TPostType) {
   return fs.readdirSync(getPostsPath(postType));
 }
 
