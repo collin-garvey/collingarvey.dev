@@ -7,7 +7,7 @@ const CTASection = () => {
   return (
     <Section theme="light">
       <div className={styles.CTASection}>
-        <LinkButton href="/work" theme="highlight">
+        <LinkButton href="/work" as="/work" theme="highlight">
           View All Work
         </LinkButton>
       </div>

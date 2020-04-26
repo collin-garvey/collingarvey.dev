@@ -13,7 +13,7 @@ const WorkCard: React.SFC<IWorkCardProps> = props => {
   const {workObj} = props;
 
   return (
-    <Link href={`/work/${workObj.slug}`}>
+    <Link href="/work/[slug]" as={`/work/${workObj.slug}`}>
       <a className={styles.workCard}>
         <div className={styles.workCardImage}>
           <img src={`${config.imagesPath}${workObj.mainImage}`} />
