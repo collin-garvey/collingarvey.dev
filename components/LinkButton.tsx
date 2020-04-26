@@ -7,6 +7,7 @@ interface ILinkButtonProps {
   href: string;
   as: string;
   theme?: 'highlight' | 'dark' | 'light';
+  [props: string]: any;
 }
 
 const LinkButton: React.SFC<ILinkButtonProps> = props => {

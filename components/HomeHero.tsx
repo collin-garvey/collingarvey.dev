@@ -14,8 +14,7 @@ const Hero: React.SFC = () => {
       <div className={styles.heroContent}>
         <h1>Collin Garvey</h1>
         <span>
-          Front-End Engineer focused on building web UIs and creative
-          experiences
+          Web Engineer focused on building UIs and creative experiences
         </span>
         <nav className={styles.socials}>
           <a href="https://github.com/collin-garvey">
