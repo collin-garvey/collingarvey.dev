@@ -1,7 +1,6 @@
 import FsLightbox from 'fslightbox-react';
 import {useState} from 'react';
 import ReactMarkdown from 'react-markdown';
-import CTASection from '../../components/CTASection';
 import ExternalLink from '../../components/ExternalLink';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
@@ -9,6 +8,7 @@ import {TagList} from '../../components/TagList';
 import config from '../../data/config.js';
 import {getAllPosts, getPostBySlug, TWorkPost} from '../../lib/api';
 import styles from '../../styles/WorkPost.module.css';
+import SectionBump from './../../components/SectionBump';
 
 export default function Post({post}) {
   const carouselImages = post.images.map((path: string) => {
@@ -86,8 +86,8 @@ export default function Post({post}) {
             <ReactMarkdown source={post.content} className={styles.markdown} />
           </div>
         </article>
+        <SectionBump href="/work">View All Work</SectionBump>
       </Section>
-      <CTASection />
     </>
   );
 }

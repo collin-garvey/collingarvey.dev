@@ -32,6 +32,7 @@
 }
 .imageGrid a {
   display: block;
+  cursor: pointer;
 }
 
 .imageGrid img {
