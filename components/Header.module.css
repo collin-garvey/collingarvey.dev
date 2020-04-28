@@ -20,7 +20,7 @@
   font-family: var(--font-teko);
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--headline);
 }
 
 .nav {
@@ -34,10 +34,7 @@
   padding: 0.3rem;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-.nav a:hover {
-  text-decoration: underline;
+  color: var(--headline);
 }
 
 .nav a:last-of-type {

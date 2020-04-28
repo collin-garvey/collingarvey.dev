@@ -35,21 +35,27 @@ export default function Post({post}) {
       <Section width="wide">
         <article className={styles.WorkPost}>
           <div className={styles.sidebar}>
-            <h3>Project Type</h3>
-            <TagList tags={[post.type]} />
-            <h3>Technologies</h3>
-            <TagList tags={post.tags} />
-            {post.liveUrl && (
-              <div>
-                <h3>Live URL</h3>
-                <p>
-                  <ExternalLink href={post.liveUrl}>
-                    {post.liveUrl}
-                  </ExternalLink>
-                </p>
-              </div>
-            )}
-            <div>
+            <div className={styles.sidebarSection}>
+              <h3>Project Type</h3>
+              <TagList tags={[post.type]} />
+            </div>
+            <div className={styles.sidebarSection}>
+              <h3>Technologies</h3>
+              <TagList tags={post.tags} />
+            </div>
+            <div className={styles.sidebarSection}>
+              {post.liveUrl && (
+                <div>
+                  <h3>Live URL</h3>
+                  <p>
+                    <ExternalLink href={post.liveUrl}>
+                      {post.liveUrl}
+                    </ExternalLink>
+                  </p>
+                </div>
+              )}
+            </div>
+            <div className={styles.sidebarSection}>
               <div className={styles.imageGrid}>
                 {carouselImages.map((imgSrc: string, index: number) => {
                   return (

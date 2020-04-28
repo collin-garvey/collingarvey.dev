@@ -1,11 +1,12 @@
 :root {
-  --background: #16161a;
+  --background: #0f0e17;
   --background-light: #242629;
   --background-dark: #010101;
-  --highlight: #7f5af0;
-  --secondary: #72757e;
+  /* --highlight: #ff8906; */
+  --highlight: #f25f4c;
+  --secondary: #f25f4c;
   --tertiary: #2cb67d;
-  --paragraph: #94a1b2;
+  --paragraph: #a7a9be;
   --headline: #fffffe;
   --font-teko: 'Teko', serif;
   --font-open: 'Open Sans', sans-serif;
@@ -45,16 +46,16 @@ body {
   font-family: var(--font-open);
   font-size: clamp(1rem, 1rem, 2rem);
   color: var(--paragraph);
-  background: #000000;
+  background: var(--background);
 }
 
 h1,
 h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 h3 {
-  font-size: clamp(2rem, 5vw, 2rem);
+  font-size: clamp(2rem, 2vw, 2rem);
 }
 
 h1,
@@ -69,11 +70,10 @@ h3 {
 
 p {
   font-size: clamp(14px, 1.125rem, 20px);
-  line-height: 1.36;
+  line-height: 1.7;
 }
 
-a,
-a[href] {
+a {
   color: var(--secondary);
   text-decoration: none;
   transition: color 200ms ease-out;
@@ -87,7 +87,7 @@ p a[href],
 h1 a[href],
 h2 a[href] {
   text-decoration: none;
-  color: var(--tertiary);
+  color: var(--secondary);
   text-underline-offset: 4px;
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;
@@ -173,7 +173,9 @@ canvas {
   -webkit-appearance: none;
   border: none;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  border: 3px solid #000;
 }
 .button::before {
   content: '';

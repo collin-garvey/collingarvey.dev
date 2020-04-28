@@ -17,12 +17,29 @@
   width: 100%;
 }
 
+.workCardImage::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  background: black;
+  opacity: 0.3;
+  transition: opacity 0.2s ease-out;
+}
+
 .workCardImage img {
   display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+.workCard .tagList {
+  margin: 0;
 }
 
 .workCardDescription {
@@ -36,8 +53,16 @@
 
 .workCard h3 {
   display: block;
+  color: var(--headline);
   text-align: left;
 }
 
 @media screen and (min-width: 768px) {
+  .workCardImage::after {
+    opacity: 0.25;
+  }
+
+  .workCard:hover .workCardImage::after {
+    opacity: 0;
+  }
 }

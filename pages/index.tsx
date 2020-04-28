@@ -1,29 +1,25 @@
-import {useEffect} from 'react';
 import FeaturedWorkCard from '../components/FeaturedWorkCard';
 import HomeHero from '../components/HomeHero';
 import Section from '../components/Section';
 import SectionBump from '../components/SectionBump';
 import config from '../data/config';
-import {destroyScene, setupScene} from '../lib/Hero3D';
 import {getWorkBySlug} from '../lib/workUtils';
-import styles from '../styles/Index.module.css';
 import ExternalLink from './../components/ExternalLink';
 
-const Index = props => {
-  // Instantiate the ThreeJS scene
-  useEffect(() => {
-    setupScene();
-
-    return () => {
-      destroyScene();
+interface IIndexProps {
+  featuredWork: {
+    frontmatter: {
+      [key: string]: any;
     };
-  }, []);
+    markdown: string;
+  };
+}
 
-  const {featuredWork, config} = props;
+const Index: React.SFC<IIndexProps> = props => {
+  const {featuredWork} = props;
 
   return (
     <>
-      <div id="heroScene" className={styles.threeScene} />
       <HomeHero />
       <Section>
         <h2>A Bit About Me</h2>
@@ -54,13 +50,14 @@ const Index = props => {
   );
 };
 
-Index.getInitialProps = async () => {
+export async function getStaticProps() {
   const featuredWork = await getWorkBySlug(config.featuredWorkSlug);
 
   return {
-    featuredWork,
-    config,
+    props: {
+      featuredWork: featuredWork,
+    },
   };
-};
+}
 
 export default Index;

@@ -4,7 +4,9 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   color: #ffffff;
+  font-weight: 600;
   transition: background-color 0.25s, color 0.25s;
+  border: 3px solid #000;
 }
 
 .LinkButton::before {
