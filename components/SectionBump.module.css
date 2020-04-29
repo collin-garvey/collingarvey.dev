@@ -17,12 +17,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
-  /* background: black; */
-  background-image: linear-gradient(108deg, black, black);
-  background-position: 50% 45%;
-  background-size: 40% 60%;
-  background-repeat: no-repeat;
-  transition: all 0.25s ease-out;
+  background: black;
 }
 
 .sectionBump a:hover {

@@ -1,4 +1,6 @@
 import React from 'react';
+import {ReactSVG} from 'react-svg';
+import config from '../data/config';
 import styles from './Footer.module.css';
 
 const Footer: React.SFC = () => {
@@ -6,6 +8,7 @@ const Footer: React.SFC = () => {
   return (
     <footer className={styles.footer}>
       <p>👋 Thanks for visiting!</p>
+      <ReactSVG src={`${config.imagesPath}logo.svg`} className={styles.logo} />
       <p>
         Catch me outside
         <br />

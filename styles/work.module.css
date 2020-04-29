@@ -4,8 +4,18 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
+.legacyProjects li {
+  list-style: square;
+  color: var(--highlight);
+  margin: 0 0 2rem;
+}
+
+.legacyProjects li p {
+  color: var(--paragraph);
+  margin: 0;
+}
+
 .experimentsCta {
-  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   background: black;

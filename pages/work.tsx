@@ -21,6 +21,7 @@ const Work: React.SFC<IWorkProps> = props => {
         <h1>Work</h1>
       </Hero>
       <Section width="wide">
+        <h2>Case Studies</h2>
         <div className={styles.workGrid}>
           {props.allWork.length &&
             props.allWork.map((post: TWorkPost, key: number) => {
@@ -28,8 +29,8 @@ const Work: React.SFC<IWorkProps> = props => {
             })}
         </div>
       </Section>
-      <Section width="normal">
-        <h3>Legacy Projects</h3>
+      <Section width="wide" className={styles.legacyProjects}>
+        <h2>Legacy Projects</h2>
         <p>
           The following links are sites I've made at least significant
           contributions to, but may not represent my current skill set or be in
@@ -39,21 +40,27 @@ const Work: React.SFC<IWorkProps> = props => {
 
         <ul>
           <li>
-            <ExternalLink href="https://live.fb.com">
-              https://live.fb.com
-            </ExternalLink>
+            <p>
+              <ExternalLink href="https://live.fb.com">
+                Facebook Live Marketing Website
+              </ExternalLink>
+            </p>
             <p>Wordpress VIP - Feature/page additions and maintenance</p>
           </li>
           <li>
-            <ExternalLink href="https://facebook360.fb.com/">
-              https://facebook360.fb.com/
-            </ExternalLink>
+            <p>
+              <ExternalLink href="https://facebook360.fb.com/">
+                Facebook 360 Marketing Website
+              </ExternalLink>
+            </p>
             <p>Wordpress VIP - Feature/page additions and maintenance</p>
           </li>
           <li>
-            <ExternalLink href="https://www.viewpost.com">
-              https://www.viewpost.com
-            </ExternalLink>
+            <p>
+              <ExternalLink href="https://www.viewpost.com">
+                Viewpost Marketing Website
+              </ExternalLink>
+            </p>
             <p>Wordpress - Complete build</p>
           </li>
         </ul>

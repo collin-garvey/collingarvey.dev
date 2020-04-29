@@ -69,10 +69,11 @@ h3 {
 @media screen and (min-width: 768px) {
   h1,
   h2 {
+    position: relative;
     background-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0) 60%
+      rgba(0, 0, 0, 1)
     );
     background-position: 100% 50%;
     background-size: 100% 15%;
@@ -80,7 +81,31 @@ h3 {
     padding: 0 1rem;
     left: -1rem;
     width: calc(100% + 1rem);
+    text-transform: uppercase;
   }
+  h2::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    opacity: 0.25;
+    background: var(--highlight);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* h2::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    opacity: 0.2;
+    background: var(--highlight);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  } */
 }
 
 p {
