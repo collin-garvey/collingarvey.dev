@@ -4,7 +4,22 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
-@media screen and (min-width: 768px) {
+.experimentsCta {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: black;
+  padding: 3rem;
+}
+
+.experimentsCta svg {
+  display: inline-block;
+  margin: 0 0.25rem;
+  position: relative;
+  top: 5px;
+}
+
+@media screen and (min-width: 1024px) {
   .workGrid {
     grid-template-columns: repeat(2, 1fr);
   }

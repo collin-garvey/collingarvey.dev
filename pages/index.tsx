@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import SectionBump from '../components/SectionBump';
 import config from '../data/config';
 import {getWorkBySlug} from '../lib/workUtils';
+import styles from '../styles/index.module.css';
 import ExternalLink from './../components/ExternalLink';
 
 interface IIndexProps {
@@ -23,7 +24,7 @@ const Index: React.SFC<IIndexProps> = props => {
       <HomeHero />
       <Section>
         <h2>A Bit About Me</h2>
-        <p>
+        <p className={styles.intro}>
           Over my 12+ years of experience, I've uncovered a passion for
           componentized web interfaces and highly-engaging creative experiences
           that take advantage of the best tech the web has to offer. I've built

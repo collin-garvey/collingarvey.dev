@@ -2,7 +2,6 @@
   --background: #0f0e17;
   --background-light: #242629;
   --background-dark: #010101;
-  /* --highlight: #ff8906; */
   --highlight: #f25f4c;
   --secondary: #f25f4c;
   --tertiary: #2cb67d;
@@ -14,11 +13,6 @@
   --max-content-width: 1480px;
   --min-content-width: 320px;
 }
-
-@custom-media --break-sm screen and (min-width: 420px);
-@custom-media --break-md screen and (min-width: 768px);
-@custom-media --break-lg screen and (min-width: 1024px);
-@custom-media --break-xl screen and (min-width: 1280px);
 
 *,
 ::after,
@@ -49,11 +43,12 @@ body {
   background: var(--background);
 }
 
-h1,
-h2 {
-  font-size: clamp(2rem, 2vw, 3rem);
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
 }
-
+h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
 h3 {
   font-size: clamp(2rem, 2vw, 2rem);
 }
@@ -61,11 +56,31 @@ h3 {
 h1,
 h2,
 h3 {
-  color: var(--headline);
+  position: relative;
+  display: block;
+  color: var(--highlight);
   font-family: var(--font-teko);
   line-height: clamp(1, 1.2, 1.5);
   margin: 0 0 1rem 0;
   font-weight: normal;
+  background: none;
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 60%
+    );
+    background-position: 100% 50%;
+    background-size: 100% 15%;
+    background-repeat: no-repeat;
+    padding: 0 1rem;
+    left: -1rem;
+    width: calc(100% + 1rem);
+  }
 }
 
 p {
@@ -177,6 +192,7 @@ canvas {
   cursor: pointer;
   border: 3px solid #000;
 }
+
 .button::before {
   content: '';
   position: absolute;

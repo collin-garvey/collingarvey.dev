@@ -8,6 +8,10 @@
   padding: 0 0 5rem 0;
 }
 
+.section h2 {
+  margin: 0 0 3rem;
+}
+
 .sectionLight {
   background-color: var(--background-light);
 }

@@ -59,7 +59,7 @@ const Work: React.SFC<IWorkProps> = props => {
         </ul>
       </Section>
       <Section width="wide">
-        <p>
+        <p className={styles.experimentsCta}>
           Check out my{' '}
           <ExternalLink href="https://codepen.io/collin-garvey">
             <Codepen color={ICON_COLOR} size={24} />

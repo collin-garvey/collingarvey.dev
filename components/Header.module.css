@@ -16,11 +16,29 @@
 }
 
 .masthead {
+  display: flex;
+  place-items: center;
   font-weight: 600;
   font-family: var(--font-teko);
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--headline);
+}
+
+.logo {
+}
+
+.logo svg {
+  height: 20px;
+}
+
+.logo svg g * {
+  fill: var(--headline);
+  transition: all 0.2s ease-in-out;
+}
+
+.logo:hover svg g * {
+  fill: var(--highlight);
 }
 
 .nav {

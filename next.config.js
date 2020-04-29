@@ -1,11 +1,16 @@
 require('dotenv').config();
 
 module.exports = {
+  esModule: true,
   poweredByHeader: false,
   webpack: config => {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',
+    });
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: 'svg-inline-loader?classPrefix',
     });
     return config;
   },

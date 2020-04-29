@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import {ReactSVG} from 'react-svg';
+import config from '../data/config';
 import styles from './Header.module.css';
 
 const Header: React.SFC = () => {
@@ -16,7 +18,12 @@ const Header: React.SFC = () => {
       <div className={styles.headerContent}>
         <div className={styles.masthead}>
           <Link href="/">
-            <a>{'COLLIN G.'}</a>
+            <a>
+              <ReactSVG
+                src={`${config.imagesPath}logo.svg`}
+                className={styles.logo}
+              />
+            </a>
           </Link>
         </div>
         <nav className={styles.nav}>
