@@ -111,6 +111,39 @@ export default function About() {
         </p>
         <SkillsTree />
       </Section>
+      <Section>
+        <h2>Learning Roadmap</h2>
+        <p>
+          Learning something new is just another way to have fun. I try to
+          practice or try something new at least a few times a week, if not
+          every day.
+        </p>
+        <p>
+          I'm a big proponent of spending money to accelerate learning, if one
+          is able to do so. After all, time is our most valuable resource.
+        </p>
+        <p>Here's a list of things I'm learning about currently:</p>
+        <ul className="columnarList">
+          <li>
+            <ExternalLink href="https://threejs.org">ThreeJS</ExternalLink> and
+            WebGL shaders
+          </li>
+          <li>Microservice Architecture in Node</li>
+          <li>
+            <ExternalLink href="https://xstate.js.org/">XState</ExternalLink>{' '}
+            and state charts
+          </li>
+          <li>
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">
+              Web Animations API
+            </ExternalLink>
+          </li>
+          <li>Serverless technology</li>
+          <li>
+            <ExternalLink href="https://svelte.dev/">Svelte</ExternalLink>
+          </li>
+        </ul>
+      </Section>
       <Section width="normal">
         <h2>Looking for help?</h2>
         <CTA>

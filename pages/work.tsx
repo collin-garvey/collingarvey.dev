@@ -21,7 +21,7 @@ const Work: React.SFC<IWorkProps> = props => {
         <h1>Work</h1>
       </Hero>
       <Section width="wide">
-        <h2>Case Studies</h2>
+        <h2>Recent and Notable</h2>
         <div className={styles.workGrid}>
           {props.allWork.length &&
             props.allWork.map((post: TWorkPost, key: number) => {

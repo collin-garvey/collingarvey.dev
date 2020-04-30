@@ -4,6 +4,7 @@ import Gmail from '@icons-pack/react-simple-icons/lib/Gmail';
 import Linkedin from '@icons-pack/react-simple-icons/lib/Linkedin';
 import Twitter from '@icons-pack/react-simple-icons/lib/Twitter';
 import React, {useEffect} from 'react';
+import config from '../data/config';
 import {destroyScene, setupScene} from '../lib/Hero3D';
 import styles from './HomeHero.module.css';
 
@@ -40,7 +41,7 @@ const Hero: React.SFC = () => {
             <a href="https://www.linkedin.com/in/collingarvey/">
               <Linkedin color={ICON_COLOR} size={24} />
             </a>
-            <a href="mailto:hello@collingarvey.dev">
+            <a href={`mailto:${config.contactEmail}`}>
               <Gmail color={ICON_COLOR} size={24} />
             </a>
           </nav>
