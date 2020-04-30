@@ -120,7 +120,7 @@ export default function About() {
             </strong>
           </p>
           <p>
-            <a href={`mailto:${config.contactEmail}`}>Send me an eamil</a> or
+            <a href={`mailto:${config.contactEmail}`}>Send me an e-mail</a> or
             find me on social!
           </p>
         </CTA>
