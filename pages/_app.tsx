@@ -1,5 +1,6 @@
-import '../styles/main.css';
 import {PageTransition} from 'next-page-transitions';
+import '../styles/main.css';
+import '../styles/SkillTree.css';
 import Layout from './../components/Layout';
 
 const MyApp = ({Component, pageProps, router}) => {

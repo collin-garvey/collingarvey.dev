@@ -32,11 +32,13 @@
   "homepage": "https://github.com/collin-garvey/personal-2020#readme",
   "dependencies": {
     "@icons-pack/react-simple-icons": "^2.7.1",
+    "@types/d3": "^5.7.2",
     "@types/fslightbox-react": "^1.4.0",
     "@types/react-svg": "^5.0.0",
     "@types/three": "^0.103.2",
     "aws-sdk": "^2.663.0",
     "classnames": "^2.2.6",
+    "d3": "^5.16.0",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
     "fslightbox-react": "^1.4.9",

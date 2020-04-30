@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import Section from '../components/Section';
+import SkillsTree from '../components/SkillsTree';
 import imagesPath from '../data/config.js';
 
 export default function About() {
@@ -8,6 +9,9 @@ export default function About() {
       <Hero imagePath={`${imagesPath}about/about-hero.jpg`} theme="short">
         <h1>About</h1>
       </Hero>
+      <Section>
+        <SkillsTree />
+      </Section>
       <Section>
         <p>Hey, I'm Collin!</p>
         <p>
