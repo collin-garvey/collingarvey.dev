@@ -4,4 +4,5 @@ export default {
   featuredWorkSlug: 'fb-connectivity',
   staticPath: `${process.env.assetPrefix}/static/`,
   imagesPath: `${process.env.assetPrefix}/static/images/`,
+  contactEmail: 'collin.garvey@gmail.com',
 };

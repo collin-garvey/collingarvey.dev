@@ -1,10 +1,12 @@
 import * as d3 from 'd3';
 import data from '../data/skillsData';
 
-const setup = () => {
+const setup = (props: {labelClass: string}) => {
   const rootElem = document.getElementById('skillTreeRoot');
   const width = rootElem.clientWidth;
   const height = rootElem.clientHeight;
+
+  console.log(width, height);
 
   const pack = data =>
     d3
@@ -30,7 +32,8 @@ const setup = () => {
 
   const svg = d3
     .create('svg')
-    .attr('viewBox', `-${width / 2} -${height / 2} ${width} ${height}`)
+    .attr('viewBox', `-${width / 2} -${(height - 110) / 2} ${width} ${height}`)
+    .attr('preserveAspectRatio', 'xMinYMin meet')
     .style('display', 'block')
     .style('margin', '0 0')
     .style('background', color(0))
@@ -61,7 +64,7 @@ const setup = () => {
     .selectAll('text')
     .data(root.descendants())
     .join('text')
-    .attr('class', 'label')
+    .attr('class', props.labelClass)
     .style('fill-opacity', d => {
       return d.parent === root ? 1 : 0;
     })

@@ -94,23 +94,16 @@ h3 {
     top: 0;
     left: 0;
   }
-
-  /* h2::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    opacity: 0.2;
-    background: var(--highlight);
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  } */
 }
 
 p {
   font-size: clamp(14px, 1.125rem, 20px);
   line-height: 1.7;
+}
+
+p strong {
+  color: white;
+  font-weight: normal;
 }
 
 a {
@@ -241,4 +234,8 @@ canvas {
 .button:hover::before {
   transform: scale3d(1, 1, 1);
   opacity: 1;
+}
+
+.columnarList {
+  column-count: 2;
 }

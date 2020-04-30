@@ -4,7 +4,7 @@ import styles from './SkillsTree.module.css';
 
 const SkillsTree = () => {
   useEffect(() => {
-    SkillTree();
+    SkillTree({labelClass: styles.label});
   }, []);
   return <div id="skillTreeRoot" className={styles.SkillsTree} />;
 };
