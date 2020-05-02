@@ -2,12 +2,14 @@
 title: 'Facebook Transparency'
 date: '2020-04-15'
 slug: 'fb-transparency'
-mainImage: 'work/fbc-conference/fbc-conference.jpg'
+mainImage: 'work/fb-transparency/fb-transparency.jpg'
 featuredBlurb: 'I worked with the Facebook Transparency team to deliver a website to help communicate how Facbook enforces policies, responds to data requests and protects intellectual property.'
 liveUrl: 'https://transparency.facebook.com'
 images:
-  - 'work/fbc-conference/fbc-conference.jpg'
-  - 'work/fbc-conference/fbc-conference-2.jpg'
+  - 'work/fb-transparency/fb-transparency.jpg'
+  - 'work/fb-transparency/fb-transparency-2.png'
+  - 'work/fb-transparency/fb-transparency-3.png'
+  - 'work/fb-transparency/fb-transparency-4.png'
 tags:
   - React
   - Flux

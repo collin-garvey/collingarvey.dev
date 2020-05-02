@@ -2,12 +2,11 @@
 title: 'Dev Management @ PRPL'
 date: '2020-04-15'
 slug: 'prpl-dev-mgmt'
-mainImage: 'work/fbc-conference/fbc-conference.jpg'
+mainImage: 'work/prpl-management/prpl-management.jpg'
 featuredBlurb: 'I spent over two years serving the development team at Purple Rock Scissors as their Development Manager. Read more about what I learned and what was accomplished!'
 liveUrl: ''
 images:
-  - 'work/fbc-conference/fbc-conference.jpg'
-  - 'work/fbc-conference/fbc-conference-2.jpg'
+  - 'work/prpl-management/prpl-management.jpg'
 tags:
   - React
   - TypeScript
@@ -19,7 +18,7 @@ type: 'Management'
 
 ## Overview
 
-I felt it was important to write about my experience as the Development Manager at [Purple Rock Scissors](https://prpl.rs)(PRPL) as it explains how a majority of my work weeks were spent over the past two years.
+I felt it was important to write about my experience as the Development Manager at [Purple Rock Scissors](https://prpl.rs) (PRPL) as it explains how a majority of my work weeks were spent over the past two years.
 
 PRPL is a fast-paced digital strategic agency based in Orlando, FL. They focus on building web and creative experiences that are informed by research and thoughtful planning. They retain clients such as Facebook, LEGO, NASA, Siemens, and many more.
 
