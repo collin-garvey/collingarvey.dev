@@ -70,7 +70,9 @@ export const setupScene = () => {
     gltf => {
       modelContainer.add(gltf.scene);
     },
-    undefined,
+    xhr => {
+      // console.log(`${Math.round((xhr.loaded / xhr.total) * 100)}% loaded`);
+    },
     console.error,
   );
 

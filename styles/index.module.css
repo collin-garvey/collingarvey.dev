@@ -1,0 +1,42 @@
+.bitAboutMe {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.intro {
+  margin: 0 2rem 0 0;
+  text-align: left;
+  font-size: 1.2rem;
+  column-count: 1;
+  widows: 2;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 50%;
+  margin: 2rem auto 0;
+  place-items: center;
+}
+
+.prplLogo {
+  grid-column: span 2;
+  margin: 0 auto;
+}
+
+.prplLogo svg {
+  width: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .bitAboutMe {
+    flex-direction: row;
+  }
+  .logos {
+    width: 30%;
+    gap: 3rem;
+    margin: 0;
+  }
+}

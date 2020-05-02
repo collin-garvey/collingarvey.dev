@@ -1,63 +1,105 @@
 import FsLightbox from 'fslightbox-react';
 import {useState} from 'react';
 import ReactMarkdown from 'react-markdown';
-import CTASection from '../../components/CTASection';
+import ExternalLink from '../../components/ExternalLink';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
-import {Tag, TagList} from '../../components/Tag';
+import PageBody from '../../components/PageBody';
+import {TagList} from '../../components/TagList';
 import config from '../../data/config.js';
 import {getAllPosts, getPostBySlug, TWorkPost} from '../../lib/api';
 import styles from '../../styles/WorkPost.module.css';
+import SectionBump from './../../components/SectionBump';
 
 export default function Post({post}) {
   const carouselImages = post.images.map((path: string) => {
     return `${config.imagesPath}${path}`;
   });
-  const [toggler, setToggler] = useState(false);
+
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
+
+  function openLightboxOnSlide(index: number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: index,
+    });
+  }
 
   return (
     <>
       <Hero imagePath={`${config.imagesPath}${post.mainImage}`}>
         <h1>{post.title}</h1>
       </Hero>
-      <Section width="wide">
-        <article className={styles.WorkPost}>
-          <div className={styles.sidebar}>
-            <h3>Project Type</h3>
-            <TagList>
-              <Tag>{post.type}</Tag>
-            </TagList>
-            <h3>Technologies</h3>
-            <div className={styles.tagList}>
-              {post.tags.map((tag: string, index: number) => {
-                return (
-                  <span className={styles.tag} key={index}>
-                    {tag}
-                  </span>
-                );
-              })}
-            </div>
-            {post.liveUrl && (
-              <>
-                <h3>URL</h3>
-                <div className={styles.tagList}>
-                  <span className={styles.tag}>
-                    <a href={post.liveUrl} target="_blank">
-                      {post.liveUrl}
-                    </a>
-                  </span>
+      <PageBody>
+        <Section width="wide">
+          <article className={styles.WorkPost}>
+            <div className={styles.sidebar}>
+              <div className={styles.sidebarSection}>
+                <h3>Project Type</h3>
+                <TagList tags={[post.type]} />
+              </div>
+              <div className={styles.sidebarSection}>
+                <h3>Technologies</h3>
+                <TagList tags={post.tags} />
+              </div>
+              <div className={styles.sidebarSection}>
+                {post.liveUrl && (
+                  <div>
+                    <h3>Live URL</h3>
+                    <p>
+                      <ExternalLink href={post.liveUrl}>
+                        {post.liveUrl}
+                      </ExternalLink>
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className={styles.sidebarSection}>
+                <div className={styles.imageGrid}>
+                  {carouselImages.map((imgSrc: string, index: number) => {
+                    return (
+                      <a
+                        key={index}
+                        onClick={() => openLightboxOnSlide(index + 1)}
+                      >
+                        <img src={imgSrc} />
+                      </a>
+                    );
+                  })}
                 </div>
-              </>
-            )}
-            <button onClick={() => setToggler(!toggler)}>View Gallery</button>
-            <FsLightbox toggler={toggler} sources={carouselImages} />
-          </div>
-          <div className={styles.postContent}>
-            <ReactMarkdown source={post.content} className={styles.markdown} />
-          </div>
-        </article>
-      </Section>
-      <CTASection />
+                <button
+                  className="button"
+                  onClick={() =>
+                    setLightboxController({
+                      toggler: !lightboxController.toggler,
+                      slide: 1,
+                    })
+                  }
+                >
+                  View Gallery
+                </button>
+
+                <FsLightbox
+                  toggler={lightboxController.toggler}
+                  sources={carouselImages}
+                  type="image"
+                  slide={lightboxController.slide}
+                />
+              </div>
+            </div>
+            <div className={styles.postContent}>
+              <ReactMarkdown
+                source={post.content}
+                className={styles.markdown}
+              />
+            </div>
+          </article>
+          <SectionBump href="/work">View All Work</SectionBump>
+        </Section>
+      </PageBody>
     </>
   );
 }
@@ -70,7 +112,7 @@ export async function getStaticProps({params}) {
     'content',
     'mainImage',
     'featuredBlurb',
-    'liveURL',
+    'liveUrl',
     'images',
     'tags',
     'type',

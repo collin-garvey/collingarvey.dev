@@ -1,0 +1,13 @@
+.intro {
+  clear: both;
+}
+
+.intro img {
+  display: block;
+  width: 150px;
+  height: auto;
+  float: left;
+  margin: 0 1rem 1rem 0;
+  border-radius: 50%;
+  overflow: hidden;
+}

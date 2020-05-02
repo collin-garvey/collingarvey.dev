@@ -7,16 +7,12 @@
   height: clamp(150px, 50vh, 350px);
   width: 100%;
   overflow: hidden;
-  /* border-bottom: 3px solid var(--highlight); */
   transition: all 250ms ease-in-out;
 }
 
 .heroShort {
   min-height: 150px;
   height: clamp(150px, 20vh, 250px);
-}
-
-.heroTall {
 }
 
 .heroImage {
@@ -30,6 +26,17 @@
   background-position: center center;
   width: 100%;
   height: 100%;
+}
+
+.heroImage::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(transparent, rgba(0, 0, 0, 1));
+  content: '';
+  z-index: 2;
 }
 
 .heroContent {
@@ -47,6 +54,7 @@
   backdrop-filter: blur(10px);
   padding: 12px 30px 4px;
   margin: 0;
+  z-index: 3;
 }
 
 .heroContent span {
@@ -55,7 +63,7 @@
   max-width: var(--reading-width);
 }
 
-@media (--break-lg) {
+@media screen and (min-width: 768px) {
   .hero {
     height: clamp(350px, 70vh, 700px);
   }

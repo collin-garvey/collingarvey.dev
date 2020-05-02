@@ -1,0 +1,29 @@
+.SkillsTree {
+  width: 100%;
+  position: relative;
+  padding-top: calc(12 / 16 * 100%);
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.SkillsTree svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  display: inline-block;
+  background-color: #000000;
+  padding: 3px 6px;
+  font-family: var(--font-open);
+  font-weight: 600;
+  font-size: 24px;
+  fill: white;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 18px;
+  }
+}

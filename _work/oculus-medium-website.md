@@ -7,9 +7,9 @@ featuredBlurb: "I helped Oculus Medium modernize their website's front-end and a
 liveUrl: 'https://oculus.com/medium'
 images:
   - 'work/oculus-medium/oc-medium-landing.jpg'
-  - 'work/oculus-medium/oc-medium-landing.jpg'
-  - 'work/oculus-medium/oc-medium-landing.jpg'
-  - 'work/oculus-medium/oc-medium-landing.jpg'
+  - 'work/oculus-medium/oc-medium-landing-2.jpg'
+  - 'work/oculus-medium/oc-medium-ui-detail.jpg'
+  - 'work/oculus-medium/credits.jpg'
 tags:
   - React
   - Hack

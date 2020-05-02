@@ -15,8 +15,10 @@ const PostLink: React.SFC<IPostLinkProps> = props => {
   return (
     <Link href="/blog/[slug]" as={`/blog/${slug}`}>
       <a>
-        <h3>{title}</h3>
-        <span>{date}</span>
+        <article>
+          <h3>{title}</h3>
+          <span>{date}</span>
+        </article>
       </a>
     </Link>
   );
@@ -37,12 +39,13 @@ const Blog: React.SFC<IBlogProps> = props => {
           {props.allBlogs.length &&
             props.allBlogs.map((post, key: number) => {
               return (
-                <PostLink
-                  key={key}
-                  slug={post.slug}
-                  title={post.title}
-                  date={post.date}
-                />
+                <li key={key}>
+                  <PostLink
+                    slug={post.slug}
+                    title={post.title}
+                    date={post.date}
+                  />
+                </li>
               );
             })}
         </ul>

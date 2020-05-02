@@ -1,7 +1,7 @@
 .WorkPost {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 6rem;
 }
 
 .sidebar {
@@ -24,7 +24,33 @@
   margin: 1rem 0;
 }
 
-@media (--break-lg) {
+.markdown p + h2 {
+  margin: 2rem 0 1rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  margin: 2rem 0;
+}
+.imageGrid a {
+  display: block;
+  cursor: pointer;
+}
+
+.imageGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 100px;
+}
+
+.sidebarSection {
+  margin: 0 0 2rem;
+}
+
+@media screen and (min-width: 768px) {
   .WorkPost {
     grid-template-columns: 0.6fr 0.4fr;
   }

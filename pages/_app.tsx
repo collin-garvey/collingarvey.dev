@@ -1,5 +1,5 @@
-import '../styles/main.css';
 import {PageTransition} from 'next-page-transitions';
+import '../styles/main.css';
 import Layout from './../components/Layout';
 
 const MyApp = ({Component, pageProps, router}) => {

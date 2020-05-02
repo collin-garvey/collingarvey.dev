@@ -1,11 +1,7 @@
-.tagList {
-  margin: 1rem 0 2rem;
-}
-
 .tag {
   display: inline-block;
   background: #000000;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   margin: 0 0.5rem 0.5rem 0;
-  color: var(--highlight);
+  color: var(--paragraph);
 }

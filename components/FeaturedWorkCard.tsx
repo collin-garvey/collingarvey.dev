@@ -1,4 +1,3 @@
-import cx from 'classnames';
 import Link from 'next/link';
 import React from 'react';
 import config from '../data/config.js';
@@ -20,24 +19,25 @@ const Project: React.SFC<IFeaturedWorkProps> = props => {
 
   return (
     <div className={styles.FeaturedProjectCard}>
-      <Link href={`/work/${props.slug}`}>
-        <a>
-          <div className={cx(styles.aspectContainer, styles.imageWrap)}>
-            <img
-              className={styles.aspectContainer__inner}
-              src={`${config.imagesPath}${workObject.frontmatter.mainImage}`}
-            />
-          </div>
+      <Link href="/work/[slug]" as={`/work/${props.slug}`}>
+        <a className={styles.imageWrap}>
+          <img
+            src={`${config.imagesPath}${workObject.frontmatter.mainImage}`}
+          />
         </a>
       </Link>
       <div className={styles.description}>
-        <Link href={`/work/${props.slug}`}>
+        <Link href="/work/[slug]" as={`/work/${props.slug}`}>
           <a>
             <h3>{workObject.frontmatter.title}</h3>
           </a>
         </Link>
         <p>{workObject.frontmatter.featuredBlurb}</p>
-        <LinkButton theme="highlight" href={`/work/${props.slug}`}>
+        <LinkButton
+          theme="highlight"
+          href="/work/[slug]"
+          as={`/work/${props.slug}`}
+        >
           View Project
         </LinkButton>
       </div>
