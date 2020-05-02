@@ -9,6 +9,12 @@ module.exports = {
       use: 'raw-loader',
     });
     config.module.rules.push({
+      test: /\.(glb|gltf)$/,
+      use: {
+        loader: 'file-loader',
+      },
+    });
+    config.module.rules.push({
       test: /\.svg$/,
       loader: 'svg-inline-loader?classPrefix',
     });

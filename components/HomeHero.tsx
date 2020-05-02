@@ -21,8 +21,8 @@ const Hero: React.SFC = () => {
   }, []);
   return (
     <>
-      <div id="heroScene" className={styles.threeScene} />
       <div className={styles.HomeHero}>
+        <div id="heroScene" className={styles.threeScene} />
         <div className={styles.heroContent}>
           <h1>Collin Garvey</h1>
           <span>

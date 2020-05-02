@@ -1,15 +1,20 @@
 .HomeHero {
   position: relative;
-  background: #000000;
-  padding: 2rem 2rem 3rem;
+  background-image: radial-gradient(
+    ellipse at 50% 30%,
+    black 0%,
+    var(--background) 60%
+  );
+  padding: 2rem 2rem 8rem;
 }
 
 .heroContent h1 {
   position: relative;
   text-align: center;
-  color: var(--headline);
+  color: var(--highlight);
   max-width: 750px;
   line-height: 1;
+  background: none;
   margin: 0;
 }
 
@@ -18,18 +23,20 @@
   flex-direction: column;
   place-items: center;
   text-align: center;
+  margin: 3rem 0 0 0;
 }
 
 .heroContent span {
-  color: var(--accent);
+  color: white;
   font-size: clamp(1rem, 1.2rem, 1.5rem);
   max-width: var(--reading-width);
+  font-weight: normal;
 }
 
 .socials {
   display: flex;
   place-items: center;
-  margin: 3rem 0 0 0;
+  margin: 3rem auto 0;
 }
 
 .socials a {
@@ -45,7 +52,7 @@
 }
 
 .threeScene {
-  background: #000000;
+  background: transparent;
   height: 450px;
   width: 100%;
 }

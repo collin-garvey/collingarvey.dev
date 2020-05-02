@@ -26,14 +26,7 @@ export default function About() {
             I live in sunny, humid, and hurricane-y Orlando, FL working on cool
             web things for big and small companies who enjoy cool things.
           </p>
-          <p>
-            I'm a big fan of soccer and video games, I think hawaiian pizza is
-            pretty OK, and yes, I've seen that show on Netflix.
-          </p>
         </div>
-      </Section>
-      <Section>
-        <h2>Muh Skillz</h2>
         <p>
           I specialize in front-end web development, with a preference for these
           tools:
