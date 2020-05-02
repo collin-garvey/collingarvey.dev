@@ -7,16 +7,12 @@
   height: clamp(150px, 50vh, 350px);
   width: 100%;
   overflow: hidden;
-  /* border-bottom: 3px solid var(--highlight); */
   transition: all 250ms ease-in-out;
 }
 
 .heroShort {
   min-height: 150px;
   height: clamp(150px, 20vh, 250px);
-}
-
-.heroTall {
 }
 
 .heroImage {
@@ -67,7 +63,7 @@
   max-width: var(--reading-width);
 }
 
-@media (--break-lg) {
+@media screen and (min-width: 768px) {
   .hero {
     height: clamp(350px, 70vh, 700px);
   }

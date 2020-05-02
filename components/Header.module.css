@@ -25,20 +25,13 @@
   color: var(--headline);
 }
 
-.logo {
+.logo div {
+  display: flex;
+  align-items: center;
 }
 
 .logo svg {
-  height: 20px;
-}
-
-.logo svg g * {
-  fill: var(--headline);
-  transition: all 0.2s ease-in-out;
-}
-
-.logo:hover svg g * {
-  fill: var(--highlight);
+  height: 30px;
 }
 
 .nav {

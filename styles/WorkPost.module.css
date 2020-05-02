@@ -1,7 +1,7 @@
 .WorkPost {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 6rem;
 }
 
 .sidebar {
@@ -50,7 +50,7 @@
   margin: 0 0 2rem;
 }
 
-@media (--break-lg) {
+@media screen and (min-width: 768px) {
   .WorkPost {
     grid-template-columns: 0.6fr 0.4fr;
   }
