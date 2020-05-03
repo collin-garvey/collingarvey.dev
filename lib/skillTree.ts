@@ -6,8 +6,6 @@ const setup = (props: {labelClass: string}) => {
   const width = rootElem.clientWidth;
   const height = rootElem.clientHeight;
 
-  console.log(width, height);
-
   const pack = data =>
     d3
       .pack()
