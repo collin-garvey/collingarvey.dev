@@ -12,7 +12,11 @@ export default function About() {
   return (
     <>
       <Head>
-        <meta key="og:url" name="og:url" content={`${config.siteUrl}/about`} />
+        <meta
+          key="og:url"
+          property="og:url"
+          content={`${config.siteUrl}/about`}
+        />
         <title key="title">About Me - Collin Garvey</title>
         <meta
           key="twitter:title"
@@ -21,7 +25,7 @@ export default function About() {
         />
         <meta
           key="og:title"
-          name="og:title"
+          property="og:title"
           content="About Me - Collin Garvey"
         />
         <meta
@@ -41,7 +45,7 @@ export default function About() {
         />
         <meta
           key="og:description"
-          name="og:description"
+          property="og:description"
           content="A summary of Collin Garvey's professional skills and interests"
         />
       </Head>

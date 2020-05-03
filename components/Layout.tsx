@@ -48,20 +48,20 @@ const Layout: React.SFC = props => {
           content={config.twitterImage}
         />
         {/* Open Graph general (Facebook, Pinterest & Google+) */}
-        <meta key="og:title" name="og:title" content={config.title} />
+        <meta key="og:title" property="og:title" content={config.title} />
         <meta
           key="og:description"
-          name="og:description"
+          property="og:description"
           content={config.description}
         />
-        <meta key="og:image" name="og:image" content={config.ogImage} />
-        <meta key="og:url" name="og:url" content={config.siteUrl} />
+        <meta key="og:image" property="og:image" content={config.ogImage} />
+        <meta key="og:url" property="og:url" content={config.siteUrl} />
         <meta
           key="og:site_name"
-          name="og:site_name"
+          property="og:site_name"
           content={config.siteName}
         />
-        <meta key="og:type" name="og:type" content="website" />
+        <meta key="og:type" property="og:type" content="website" />
         <link
           rel="icon"
           type="image/x-icon"

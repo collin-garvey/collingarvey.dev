@@ -21,7 +21,11 @@ const Work: React.SFC<IWorkProps> = props => {
   return (
     <>
       <Head>
-        <meta key="og:url" name="og:url" content={`${config.siteUrl}/work`} />
+        <meta
+          key="og:url"
+          property="og:url"
+          content={`${config.siteUrl}/work`}
+        />
         <title key="title">Work Examples - Collin Garvey</title>
         <meta
           key="twitter:title"
@@ -30,7 +34,7 @@ const Work: React.SFC<IWorkProps> = props => {
         />
         <meta
           key="og:title"
-          name="og:title"
+          property="og:title"
           content="Work Examples - Collin Garvey"
         />
         <meta
@@ -50,7 +54,7 @@ const Work: React.SFC<IWorkProps> = props => {
         />
         <meta
           key="og:description"
-          name="og:description"
+          property="og:description"
           content="A collection of work examples by Collin Garvey"
         />
       </Head>
