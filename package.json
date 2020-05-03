@@ -10,6 +10,7 @@
     "start": "next start",
     "s3:upload": "node -r dotenv/config ./scripts/uploadToS3.js",
     "export": "next export",
+    "postexport": "node scripts/postExport.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|mdx|graphql)\"",
     "format": "npm run prettier -- --write",
