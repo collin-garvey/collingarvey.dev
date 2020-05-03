@@ -6,10 +6,45 @@ import Section from '../components/Section';
 import SkillsTree from '../components/SkillsTree';
 import config from '../data/config';
 import styles from '../styles/about.module.css';
+import Head from 'next/head';
 
 export default function About() {
   return (
     <>
+      <Head>
+        <meta key="og:url" name="og:url" content={`${config.siteUrl}/about`} />
+        <title key="title">About Me - Collin Garvey</title>
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content="About Me - Collin Garvey"
+        />
+        <meta
+          key="og:title"
+          name="og:title"
+          content="About Me - Collin Garvey"
+        />
+        <meta
+          key="description"
+          name="description"
+          content="A summary of Collin Garvey's professional skills and interests"
+        />
+        <meta
+          key="struct:description"
+          itemProp="description"
+          content="A summary of Collin Garvey's professional skills and interests"
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content="A summary of Collin Garvey's professional skills and interests"
+        />
+        <meta
+          key="og:description"
+          name="og:description"
+          content="A summary of Collin Garvey's professional skills and interests"
+        />
+      </Head>
       <Hero theme="short">
         <h1>About</h1>
       </Hero>

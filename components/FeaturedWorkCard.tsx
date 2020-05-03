@@ -23,6 +23,7 @@ const Project: React.SFC<IFeaturedWorkProps> = props => {
         <a className={styles.imageWrap}>
           <img
             src={`${config.imagesPath}${workObject.frontmatter.mainImage}`}
+            alt={`${workObject.frontmatter.mainImage}`}
           />
         </a>
       </Link>
