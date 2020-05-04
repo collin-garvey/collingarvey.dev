@@ -6,6 +6,10 @@ import styles from './HomeHero.module.css';
 const white = new THREE.Color(0xffffff);
 let GLTFLoader;
 
+/**
+ * TODO This whole mama-jama
+ */
+
 const FaceScan = () => {
   const gltf = useLoader(
     GLTFLoader,
