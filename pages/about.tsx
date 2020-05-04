@@ -1,54 +1,21 @@
 import CTA from '../components/CTA';
 import ExternalLink from '../components/ExternalLink';
 import Hero from '../components/Hero';
+import Meta from '../components/Meta';
 import PageBody from '../components/PageBody';
 import Section from '../components/Section';
 import SkillsTree from '../components/SkillsTree';
 import config from '../data/config';
 import styles from '../styles/about.module.css';
-import Head from 'next/head';
 
 export default function About() {
   return (
     <>
-      <Head>
-        <meta
-          key="og:url"
-          property="og:url"
-          content={`${config.siteUrl}/about`}
-        />
-        <title key="title">About Me - Collin Garvey</title>
-        <meta
-          key="twitter:title"
-          name="twitter:title"
-          content="About Me - Collin Garvey"
-        />
-        <meta
-          key="og:title"
-          property="og:title"
-          content="About Me - Collin Garvey"
-        />
-        <meta
-          key="description"
-          name="description"
-          content="A summary of Collin Garvey's professional skills and interests"
-        />
-        <meta
-          key="struct:description"
-          itemProp="description"
-          content="A summary of Collin Garvey's professional skills and interests"
-        />
-        <meta
-          key="twitter:description"
-          name="twitter:description"
-          content="A summary of Collin Garvey's professional skills and interests"
-        />
-        <meta
-          key="og:description"
-          property="og:description"
-          content="A summary of Collin Garvey's professional skills and interests"
-        />
-      </Head>
+      <Meta
+        canonical={`${config.siteUrl}/about`}
+        title="About Me - Collin Garvey"
+        description="A summary of Collin Garvey's professional skills and interests"
+      />
       <Hero theme="short">
         <h1>About</h1>
       </Hero>

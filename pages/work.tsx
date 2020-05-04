@@ -1,15 +1,15 @@
 import Codepen from '@icons-pack/react-simple-icons/lib/Codepen';
 import Github from '@icons-pack/react-simple-icons/lib/Github';
 import React from 'react';
-import Head from 'next/head';
 import ExternalLink from '../components/ExternalLink';
 import Hero from '../components/Hero';
+import Meta from '../components/Meta';
 import PageBody from '../components/PageBody';
 import Section from '../components/Section';
 import WorkCard from '../components/WorkCard';
+import config from '../data/config';
 import {getAllPosts, TWorkPost} from '../lib/api';
 import styles from '../styles/work.module.css';
-import config from '../data/config';
 
 const ICON_COLOR = '#94a1b2';
 
@@ -20,50 +20,16 @@ interface IWorkProps {
 const Work: React.SFC<IWorkProps> = props => {
   return (
     <>
-      <Head>
-        <meta
-          key="og:url"
-          property="og:url"
-          content={`${config.siteUrl}/work`}
-        />
-        <title key="title">Work Examples - Collin Garvey</title>
-        <meta
-          key="twitter:title"
-          name="twitter:title"
-          content="Work Examples - Collin Garvey"
-        />
-        <meta
-          key="og:title"
-          property="og:title"
-          content="Work Examples - Collin Garvey"
-        />
-        <meta
-          key="description"
-          name="description"
-          content="A collection of work examples by Collin Garvey"
-        />
-        <meta
-          key="struct:description"
-          itemProp="description"
-          content="A collection of work examples by Collin Garvey"
-        />
-        <meta
-          key="twitter:description"
-          name="twitter:description"
-          content="A collection of work examples by Collin Garvey"
-        />
-        <meta
-          key="og:description"
-          property="og:description"
-          content="A collection of work examples by Collin Garvey"
-        />
-      </Head>
+      <Meta
+        canonical={`${config.siteUrl}/work`}
+        title="Work Examples - Collin Garvey"
+        description="A collection of work examples by Collin Garvey"
+      />
       <Hero theme="short">
         <h1>Work</h1>
       </Hero>
       <PageBody>
         <Section width="wide">
-          <h2>Recent and Notable</h2>
           <div className={styles.workGrid}>
             {props.allWork.length &&
               props.allWork.map((post: TWorkPost, key: number) => {
