@@ -6,8 +6,8 @@ export default {
   featuredWorkSlug: 'fb-connectivity',
   staticPath: `${process.env.assetPrefix}/static/`,
   imagesPath: `${process.env.assetPrefix}/static/images/`,
-  ogImage: '/static/images/og-image.png',
+  ogImage: 'https://collingarvey.dev/static/images/og-image.png',
   twitterHandle: '@collingarvey',
-  twitterImage: '/static/images/twitter-image.png',
+  twitterImage: 'https://collingarvey.dev/static/images/twitter-image.png',
   contactEmail: 'collin.garvey@gmail.com',
 };
