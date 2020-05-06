@@ -27,6 +27,7 @@ class Dot {
   }
 
   animate() {
+    // Don't let a new animation start until the current one has concluded
     if (this.status === 'idle') {
       this.status = 'busy';
 

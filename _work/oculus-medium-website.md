@@ -2,14 +2,20 @@
 title: 'Oculus Medium Website'
 date: '2020-04-15'
 slug: 'oculus-medium-website'
-mainImage: 'work/oculus-medium/oc-medium-landing.jpg'
+mainImage:
+  url: 'work/oculus-medium/oc-medium-landing-2.jpg'
+  alt: 'Screenshot of an alternate Oculus Medium website homepage'
 featuredBlurb: "I helped Oculus Medium modernize their website's front-end and added some cool new features to help visualize VR sculptures on the web."
 liveUrl: 'https://oculus.com/medium'
 images:
-  - 'work/oculus-medium/oc-medium-landing.jpg'
-  - 'work/oculus-medium/oc-medium-landing-2.jpg'
-  - 'work/oculus-medium/oc-medium-ui-detail.jpg'
-  - 'work/oculus-medium/credits.jpg'
+  - url: 'work/oculus-medium/oc-medium-landing.jpg'
+    alt: 'Screenshot of the Oculus Medium website homepage'
+  - url: 'work/oculus-medium/oc-medium-landing-2.jpg'
+    alt: 'Screenshot of an alternate Oculus Medium website homepage'
+  - url: 'work/oculus-medium/oc-medium-ui-detail.jpg'
+    alt: 'Screenshot showing some artist cards on the Oculus Medium homepage'
+  - url: 'work/oculus-medium/credits.jpg'
+    alt: 'Screenshot of Collin Garvey in the Oculus Medium credits'
 tags:
   - React
   - Hack

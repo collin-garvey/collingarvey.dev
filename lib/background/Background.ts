@@ -12,14 +12,17 @@ const init = (rootId: string) => {
   function populateParticles() {
     dots = [];
     const particleSpacing = 200;
-    const particleSlotsX = Math.floor(width / particleSpacing);
-    const particleSlotsY = Math.floor(height / particleSpacing);
-    const margin = 60;
+    const particleSlots = [
+      Math.floor(width / particleSpacing),
+      Math.floor(height / particleSpacing),
+    ];
+    const margin = 60; // Don't start at x0 and y0
     let x = 0;
     let y = 0;
 
-    for (let ii = 0; ii <= particleSlotsX; ii++) {
-      for (let jj = 0; jj <= particleSlotsY; jj++) {
+    // Create a particle grid
+    for (let ii = 0; ii <= particleSlots[0]; ii++) {
+      for (let jj = 0; jj <= particleSlots[1]; jj++) {
         x = ii * particleSpacing + margin;
         y = jj * particleSpacing + margin;
         dots.push(new Dot(x, y, ctx, canvas));
@@ -30,6 +33,7 @@ const init = (rootId: string) => {
   function render() {
     ctx.clearRect(0, 0, width, height);
 
+    // Create a low chance the particle will animate, so it doesn't look crazy
     for (let i = 0; i < dots.length; i++) {
       let randomChance = Math.random() * 10000;
       dots[i].draw();
@@ -58,7 +62,6 @@ const init = (rootId: string) => {
 
   window.addEventListener('resize', onResize);
   onResize();
-  // populateParticles();
   render();
 };
 

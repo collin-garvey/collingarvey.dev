@@ -2,12 +2,16 @@
 title: 'Facebook Connectivity Conference App'
 date: '2020-04-15'
 slug: 'fb-connectivity'
-mainImage: 'work/fbc-conference/fbc-conference.jpg'
+mainImage:
+  url: 'work/fbc-conference/fbc-conference.jpg'
+  alt: 'Photo of conference attendees using the FB Connectivity application'
 featuredBlurb: 'I created an in-person video exploration experience for the Facebook Connectivity team to use at the Telecom Infra Project Summit in 2019. Check it out!'
 liveUrl: 'https://share.getcloudapp.com/9ZuEAlvO'
 images:
-  - 'work/fbc-conference/fbc-conference.jpg'
-  - 'work/fbc-conference/fbc-conference-2.jpg'
+  - url: 'work/fbc-conference/fbc-conference.jpg'
+    alt: 'Photo of conference attendees using the FB Connectivity application'
+  - url: 'work/fbc-conference/fbc-conference-2.jpg'
+    alt: 'Screenshot of the application showing the 3D rotating globe splash screen'
 tags:
   - React
   - TypeScript

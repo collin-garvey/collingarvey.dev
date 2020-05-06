@@ -2,11 +2,14 @@
 title: 'Dev Management @ PRPL'
 date: '2020-04-15'
 slug: 'prpl-dev-mgmt'
-mainImage: 'work/prpl-management/prpl-management.jpg'
+mainImage:
+  url: 'work/prpl-management/prpl-management.jpg'
+  alt: 'Image of the Purple Rock Scissors company logo'
 featuredBlurb: 'I spent over two years serving the development team at Purple Rock Scissors as their Development Manager. Read more about what I learned and what was accomplished!'
 liveUrl: ''
 images:
-  - 'work/prpl-management/prpl-management.jpg'
+  - url: 'work/prpl-management/prpl-management.jpg'
+    alt: 'Image of the Purple Rock Scissors company logo'
 tags:
   - React
   - TypeScript

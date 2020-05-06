@@ -8,7 +8,7 @@ export type TPost = {
   title: string;
   date?: string;
   slug: string;
-  mainImage?: string;
+  mainImage?: {url: string; alt: string};
   featuredBlurb?: string;
   tags?: [string];
   content?: string;
@@ -16,7 +16,7 @@ export type TPost = {
 
 export type TWorkPost = TPost & {
   type?: string;
-  images?: [string];
+  images?: [{url: string; alt: string}];
   liveURL?: string;
 };
 

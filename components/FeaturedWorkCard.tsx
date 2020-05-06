@@ -15,25 +15,25 @@ interface IFeaturedWorkProps {
 }
 
 const Project: React.SFC<IFeaturedWorkProps> = props => {
-  const {workObject} = props;
+  const {frontmatter} = props.workObject;
 
   return (
     <div className={styles.FeaturedProjectCard}>
       <Link href="/work/[slug]" as={`/work/${props.slug}`}>
         <a className={styles.imageWrap}>
           <img
-            src={`${config.imagesPath}${workObject.frontmatter.mainImage}`}
-            alt={`${workObject.frontmatter.mainImage}`}
+            src={`${config.imagesPath}${frontmatter.mainImage.url}`}
+            alt={`${frontmatter.mainImage.alt}`}
           />
         </a>
       </Link>
       <div className={styles.description}>
         <Link href="/work/[slug]" as={`/work/${props.slug}`}>
           <a>
-            <h3>{workObject.frontmatter.title}</h3>
+            <h3>{frontmatter.title}</h3>
           </a>
         </Link>
-        <p>{workObject.frontmatter.featuredBlurb}</p>
+        <p>{frontmatter.featuredBlurb}</p>
         <LinkButton
           theme="highlight"
           href="/work/[slug]"

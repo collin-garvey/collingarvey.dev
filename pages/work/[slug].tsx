@@ -12,10 +12,6 @@ import styles from '../../styles/WorkPost.module.css';
 import SectionBump from './../../components/SectionBump';
 
 export default function Post({post}) {
-  const carouselImages = post.images.map((path: string) => {
-    return `${config.imagesPath}${path}`;
-  });
-
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
     slide: 1,
@@ -30,7 +26,7 @@ export default function Post({post}) {
 
   return (
     <>
-      <Hero imagePath={`${config.imagesPath}${post.mainImage}`}>
+      <Hero imagePath={`${config.imagesPath}${post.mainImage.url}`}>
         <h1>{post.title}</h1>
       </Hero>
       <PageBody>
@@ -59,16 +55,21 @@ export default function Post({post}) {
               </div>
               <div className={styles.sidebarSection}>
                 <div className={styles.imageGrid}>
-                  {carouselImages.map((imgSrc: string, index: number) => {
-                    return (
-                      <a
-                        key={index}
-                        onClick={() => openLightboxOnSlide(index + 1)}
-                      >
-                        <img src={imgSrc} />
-                      </a>
-                    );
-                  })}
+                  {post.images.map(
+                    (img: {url: string; alt: string}, index: number) => {
+                      return (
+                        <a
+                          key={index}
+                          onClick={() => openLightboxOnSlide(index + 1)}
+                        >
+                          <img
+                            src={`${config.imagesPath}${img.url}`}
+                            alt={img.alt}
+                          />
+                        </a>
+                      );
+                    },
+                  )}
                 </div>
                 <button
                   className="button"
@@ -84,7 +85,10 @@ export default function Post({post}) {
 
                 <FsLightbox
                   toggler={lightboxController.toggler}
-                  sources={carouselImages}
+                  sources={post.images.map(
+                    (img: {url: string; alt: string}) =>
+                      `${config.imagesPath}${img.url}`,
+                  )}
                   type="image"
                   slide={lightboxController.slide}
                 />
