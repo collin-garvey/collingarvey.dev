@@ -30,7 +30,7 @@ While I was a devloper I had the opportunity to work on-site at Facebook's HQ in
 
 When I became a manager, my biggest priority was to ensure that the FB stack knowledge was spread throughout the company as much as was reasonable. During my time at PRPL I personally trained three engineers on this stack and ensured we'd be able to properly serve one of our biggest clients.
 
-Most of my management resbonsibilities included:
+Most of my management responsibilities included:
 
 - Enable the success of the engineering team through mentorship, training, and servant leadership tactics
 - Provide technical planning for projects and assist project teams when needed

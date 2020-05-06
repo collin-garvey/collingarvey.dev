@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  background: #000;
   min-height: 350px;
   height: clamp(150px, 50vh, 350px);
   width: 100%;

@@ -3,15 +3,10 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin: 0 -2rem;
   padding: 2rem 0;
 }
-.FeaturedProjectCard:hover .description {
-  transform: translateX(-15px);
-}
-.FeaturedProjectCard:hover .imageWrap img {
-  /* margin: 0 35% 0 0; */
-  transform: scale(1.1);
-}
+
 .FeaturedProjectCard h3 {
   text-align: left;
 }
@@ -20,9 +15,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: 100%;
-  margin: 0 40% 0 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -41,7 +36,8 @@
   position: relative;
   z-index: 2;
   background: var(--background);
-  margin: auto 0 auto 50%;
+  margin: 45% auto 0;
+  width: calc(100% - 4rem);
   padding: 2rem 0 2rem 2rem;
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -49,5 +45,33 @@
 @media screen and (min-width: 768px) {
   .FeaturedProjectCard {
     flex-direction: row;
+    margin: 0;
+  }
+
+  .FeaturedProjectCard:hover .description {
+    transform: translateX(-15px);
+  }
+
+  .FeaturedProjectCard:hover .imageWrap img {
+    transform: scale(1.1);
+  }
+
+  .imageWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    margin: 0 40% 0 0;
+    overflow: hidden;
+  }
+
+  .description {
+    position: relative;
+    z-index: 2;
+    background: var(--background);
+    margin: auto 0 auto 50%;
+    padding: 2rem 0 2rem 2rem;
+    transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
   }
 }
