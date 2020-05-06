@@ -3,6 +3,7 @@ import React from 'react';
 import config from '../data/config';
 import Footer from './Footer';
 import Header from './Header';
+import Background from './Background';
 import Meta from './Meta';
 
 const Layout: React.SFC = props => {
@@ -25,6 +26,7 @@ const Layout: React.SFC = props => {
         />
       </Head>
       <Header />
+      <Background />
       <main>{props.children}</main>
       <Footer />
     </>

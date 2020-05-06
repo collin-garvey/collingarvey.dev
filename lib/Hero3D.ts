@@ -35,20 +35,20 @@ export const setupScene = () => {
     20,
     rootElem.clientWidth / rootElem.clientHeight,
     0.1,
-    20,
+    16,
   );
   mainCamera.position.z = 6;
 
   // Point Lights
-  backLight = new THREE.PointLight(0xffffff, 5, 0);
+  backLight = new THREE.PointLight(0x262bff, 12, 0);
   backLight.position.set(-5, 5, -5);
   mainScene.add(backLight);
 
-  fillLight = new THREE.PointLight(0xffffff, 7, 0);
+  fillLight = new THREE.PointLight(0xf25f4c, 10, 0);
   fillLight.position.set(-5, 0, 5);
   mainScene.add(fillLight);
 
-  keyLight = new THREE.PointLight(0xffffff, 3, 0);
+  keyLight = new THREE.PointLight(0xffffff, 7, 0);
   keyLight.position.set(5, 0, 0);
   mainScene.add(keyLight);
 
@@ -83,7 +83,7 @@ export const setupScene = () => {
   const FONT_CHAR_SIZE = new THREE.Vector2(8, 8);
 
   const fontLoader = new THREE.TextureLoader();
-  const fontFile = `${config.imagesPath}collin-font.png`;
+  const fontFile = `${config.imagesPath}collin-font5.png`;
   const tFont = fontLoader.load(fontFile);
   tFont.minFilter = THREE.NearestFilter;
   tFont.magFilter = THREE.NearestFilter;

@@ -25,6 +25,12 @@
   color: white;
 }
 
+html,
+body,
+#__next {
+  height: 100% !important;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -32,7 +38,9 @@ html {
   scroll-behavior: smooth;
 }
 main {
+  position: relative;
   min-height: 100vh;
+  z-index: 3;
 }
 
 body {
