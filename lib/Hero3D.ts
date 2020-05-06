@@ -44,11 +44,11 @@ export const setupScene = () => {
   backLight.position.set(-5, 5, -5);
   mainScene.add(backLight);
 
-  fillLight = new THREE.PointLight(0xf25f4c, 10, 0);
+  fillLight = new THREE.PointLight(0xf25f4c, 8, 0);
   fillLight.position.set(-5, 0, 5);
   mainScene.add(fillLight);
 
-  keyLight = new THREE.PointLight(0xffffff, 7, 0);
+  keyLight = new THREE.PointLight(0xffffff, 6, 0);
   keyLight.position.set(5, 0, 0);
   mainScene.add(keyLight);
 

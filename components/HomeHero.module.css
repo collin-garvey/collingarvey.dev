@@ -14,11 +14,13 @@
 }
 
 .heroContent {
+  position: relative;
   display: flex;
   flex-direction: column;
   place-items: center;
   text-align: center;
   margin: 3rem 0 0 0;
+  z-index: 2;
 }
 
 .heroContent span {

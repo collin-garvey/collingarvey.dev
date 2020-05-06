@@ -7,7 +7,6 @@ import React, {useEffect} from 'react';
 import config from '../data/config';
 import {destroyScene, setupScene} from '../lib/Hero3D';
 import styles from './HomeHero.module.css';
-import cx from 'classnames';
 
 const ICON_COLOR = '#94a1b2';
 
