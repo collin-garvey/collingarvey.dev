@@ -22,6 +22,8 @@ const RESIZE_DEBOUNCE = 32;
 export const setupScene = () => {
   const GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader')
     .GLTFLoader;
+  const DRACOLoader = require('three/examples/jsm/loaders/DRACOLoader')
+    .DRACOLoader;
   const EffectComposer = require('three/examples/jsm/postprocessing/EffectComposer')
     .EffectComposer;
   const ShaderPass = require('three/examples/jsm/postprocessing/ShaderPass')
@@ -60,13 +62,16 @@ export const setupScene = () => {
 
   // Load 3D Model
   const loader = new GLTFLoader();
-  const modelFile = `${config.staticPath}3d/coll-garvey-face-scan.glb`;
+  const dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath(`${config.staticPath}3d/draco/`);
+
+  loader.setDRACOLoader(dracoLoader);
 
   const modelContainer = new THREE.Group();
   mainScene.add(modelContainer);
 
   loader.load(
-    modelFile,
+    `${config.staticPath}3d/collin-garvey-face-scan.glb`,
     gltf => {
       modelContainer.add(gltf.scene);
     },
