@@ -16,15 +16,13 @@ interface IFeaturedWorkProps {
 
 const Project: React.SFC<IFeaturedWorkProps> = props => {
   const {frontmatter} = props.workObject;
+  const workImage = require(`../public/static/images/${frontmatter.mainImage.url}?resize&size=650`);
 
   return (
     <div className={styles.FeaturedProjectCard}>
       <Link href="/work/[slug]" as={`/work/${props.slug}`}>
         <a className={styles.imageWrap}>
-          <img
-            src={`${config.imagesPath}${frontmatter.mainImage.url}`}
-            alt={`${frontmatter.mainImage.alt}`}
-          />
+          <img src={workImage.src} alt={`${frontmatter.mainImage.alt}`} />
         </a>
       </Link>
       <div className={styles.description}>

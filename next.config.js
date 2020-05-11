@@ -1,6 +1,8 @@
 require('dotenv').config();
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
 
-module.exports = {
+const nextConfig = {
   esModule: true,
   poweredByHeader: false,
   webpack: config => {
@@ -26,3 +28,20 @@ module.exports = {
       : '',
   },
 };
+
+module.exports = withPlugins(
+  [
+    [
+      optimizedImages,
+      {
+        handleImages: ['jpeg', 'png', 'gif'],
+        responsive: {
+          sizes: [300, 650, 1200, 2000],
+          placeholder: true,
+          placeholderSize: 50,
+        },
+      },
+    ],
+  ],
+  nextConfig,
+);

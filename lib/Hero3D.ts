@@ -88,7 +88,7 @@ export const setupScene = () => {
   const FONT_CHAR_SIZE = new THREE.Vector2(8, 8);
 
   const fontLoader = new THREE.TextureLoader();
-  const fontFile = `${config.imagesPath}collin-font5.png`;
+  const fontFile = `${config.imagesPath}collin-font.png`;
   const tFont = fontLoader.load(fontFile);
   tFont.minFilter = THREE.NearestFilter;
   tFont.magFilter = THREE.NearestFilter;

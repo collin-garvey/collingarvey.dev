@@ -57,15 +57,13 @@ export default function Post({post}) {
                 <div className={styles.imageGrid}>
                   {post.images.map(
                     (img: {url: string; alt: string}, index: number) => {
+                      let thumb = require(`../../public/static/images/${img.url}?resize&size=300`);
                       return (
                         <a
                           key={index}
                           onClick={() => openLightboxOnSlide(index + 1)}
                         >
-                          <img
-                            src={`${config.imagesPath}${img.url}`}
-                            alt={img.alt}
-                          />
+                          <img src={thumb.src} alt={img.alt} />
                         </a>
                       );
                     },
