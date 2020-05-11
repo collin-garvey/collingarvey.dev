@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Teko';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/static/fonts/Teko-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Teko';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/static/fonts/Teko-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/static/fonts/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/static/fonts/OpenSans-Bold.woff') format('woff');
+}
+
 :root {
   --background: #0f0e17;
   --background-light: #242629;

@@ -20,10 +20,6 @@ const Layout: React.SFC = props => {
           type="image/x-icon"
           href={`${config.imagesPath}logo.svg`}
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Teko:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Header />
       <Background />
