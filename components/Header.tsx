@@ -17,7 +17,7 @@ const Header: React.SFC = () => {
       <div className={styles.headerContent}>
         <div className={styles.masthead}>
           <Link href="/">
-            <a className={styles.logo}>
+            <a aria-label="Home link" className={styles.logo}>
               <div>
                 <Logo />
               </div>

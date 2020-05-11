@@ -29,19 +29,34 @@ const Hero: React.SFC = () => {
             Web Engineer focused on building UIs and creative experiences
           </span>
           <nav className={styles.socials}>
-            <a href="https://github.com/collin-garvey">
+            <a
+              aria-label="Link to Collin's GitHub"
+              href="https://github.com/collin-garvey"
+            >
               <Github color={ICON_COLOR} size={24} />
             </a>
-            <a href="https://www.twitter.com/collingarvey">
+            <a
+              aria-label="Link to Collin's Twitter"
+              href="https://www.twitter.com/collingarvey"
+            >
               <Twitter color={ICON_COLOR} size={24} />
             </a>
-            <a href="https://codepen.io/collin-garvey">
+            <a
+              aria-label="Link to Collin's CodePen"
+              href="https://codepen.io/collin-garvey"
+            >
               <Codepen color={ICON_COLOR} size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/collingarvey/">
+            <a
+              aria-label="Link to Collin's LinkedIn"
+              href="https://www.linkedin.com/in/collingarvey/"
+            >
               <Linkedin color={ICON_COLOR} size={24} />
             </a>
-            <a href={`mailto:${config.contactEmail}`}>
+            <a
+              aria-label="Link to Collin's e-mail"
+              href={`mailto:${config.contactEmail}`}
+            >
               <Gmail color={ICON_COLOR} size={24} />
             </a>
           </nav>

@@ -131,7 +131,8 @@ h3 {
   }
 }
 
-p {
+p,
+li {
   font-size: clamp(14px, 1.125rem, 20px);
   line-height: 1.7;
 }

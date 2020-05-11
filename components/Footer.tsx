@@ -9,7 +9,7 @@ const Footer: React.SFC = () => {
     <footer className={styles.footer}>
       <p>👋 Thanks for visiting!</p>
       <Link href="/">
-        <a className={styles.logo}>
+        <a aria-label="Home link" className={styles.logo}>
           <Logo />
         </a>
       </Link>
