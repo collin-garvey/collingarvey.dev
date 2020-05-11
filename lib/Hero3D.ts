@@ -39,7 +39,7 @@ export const setupScene = () => {
     0.1,
     16,
   );
-  mainCamera.position.z = 6;
+  mainCamera.position.z = 9;
 
   // Point Lights
   backLight = new THREE.PointLight(0x262bff, 12, 0);
@@ -71,7 +71,7 @@ export const setupScene = () => {
   mainScene.add(modelContainer);
 
   loader.load(
-    `${config.staticPath}3d/collin-garvey-face-scan.glb`,
+    `${config.staticPath}3d/cg-face-scan2-optimized.glb`,
     gltf => {
       modelContainer.add(gltf.scene);
     },
