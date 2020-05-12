@@ -1,8 +1,8 @@
 .SkillsTree {
   width: 100%;
   position: relative;
-  padding-top: calc(12 / 16 * 100%);
-  vertical-align: top;
+  padding-top: 100%;
+  user-select: none;
   overflow: hidden;
 }
 
@@ -12,18 +12,55 @@
   left: 0;
 }
 
+.skillsTreeWrap {
+  margin: 4rem 0 0;
+  background: linear-gradient(
+    to right,
+    hsl(247, 24%, 7%) 0%,
+    rgb(122, 39, 121) 50%,
+    hsl(7, 86%, 62%) 100%
+  );
+  padding: 1px;
+}
+
+.chartKey {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  padding: 2px 8px;
+  background: linear-gradient(
+    to right,
+    hsl(247, 24%, 7%) 0%,
+    rgb(122, 39, 121) 50%,
+    hsl(7, 86%, 62%) 100%
+  );
+}
+
+.chartKey > span {
+  display: inline-flex;
+  font-size: 20px;
+}
+
 .label {
   display: inline-block;
   background-color: #000000;
+  color: white;
   padding: 3px 6px;
   font-family: var(--font-open);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
   fill: white;
+  word-wrap: break-word;
+  max-width: 70px;
 }
 
 @media screen and (min-width: 768px) {
   .label {
-    font-size: 18px;
+    font-size: 24px;
+  }
+
+  .chartKey > span {
+    font-size: 30px;
   }
 }

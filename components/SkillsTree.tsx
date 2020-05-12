@@ -6,7 +6,15 @@ const SkillsTree = () => {
   useEffect(() => {
     SkillTree({labelClass: styles.label});
   }, []);
-  return <div id="skillTreeRoot" className={styles.SkillsTree} />;
+  return (
+    <div className={styles.skillsTreeWrap}>
+      <div className={styles.chartKey}>
+        <span>😬</span>
+        <span>🤩</span>
+      </div>
+      <div id="skillTreeRoot" className={styles.SkillsTree} />
+    </div>
+  );
 };
 
 export default SkillsTree;

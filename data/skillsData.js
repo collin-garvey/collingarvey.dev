@@ -41,7 +41,7 @@ const data = {
               children: [
                 {
                   name: 'Hooks API',
-                  value: 9,
+                  value: 10,
                 },
                 {
                   name: 'Redux',

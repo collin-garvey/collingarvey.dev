@@ -23,14 +23,14 @@ const setup = (props: {labelClass: string}) => {
 
   const color = d3
     .scaleLinear()
-    .domain([0, 4])
+    .domain([1, 10])
     // @ts-ignore
     .range(['hsl(247,24%,7%)', 'hsl(7,86%,62%)'])
-    .interpolate(d3.interpolateHcl);
+    .interpolate(d3.interpolateHsl);
 
   const svg = d3
     .create('svg')
-    .attr('viewBox', `-${width / 2} -${(height - 110) / 2} ${width} ${height}`)
+    .attr('viewBox', `-${width / 2} -${height / 2} ${width} ${height}`)
     .attr('preserveAspectRatio', 'xMinYMin meet')
     .style('display', 'block')
     .style('margin', '0 0')
@@ -43,7 +43,8 @@ const setup = (props: {labelClass: string}) => {
     .selectAll('circle')
     .data(root.descendants().slice(1))
     .join('circle')
-    .attr('fill', d => (d.children ? color(d.depth) : '#f25f4c'))
+    // @ts-ignore
+    .attr('fill', d => (d.children ? color(d.depth) : color(d.data.value)))
     .attr('pointer-events', d => (!d.children ? 'none' : null))
     .on('mouseover', function() {
       d3.select(this)
@@ -70,9 +71,7 @@ const setup = (props: {labelClass: string}) => {
     .style('display', d => (d.parent === root ? 'inline-block' : 'none'))
     .text(d => {
       // @ts-ignore
-      const valueStr = d.data.value ? ` - ${d.data.value}` : '';
-      // @ts-ignore
-      return `${d.data.name}${valueStr}`;
+      return `${d.data.name}`;
     });
 
   zoomTo([root.x, root.y, root.r * 2]);
@@ -100,7 +99,7 @@ const setup = (props: {labelClass: string}) => {
 
     const transition = svg
       .transition()
-      .duration(d3.event.altKey ? 7500 : 750)
+      .duration(750)
       .tween('zoom', d => {
         const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
         return t => zoomTo(i(t));

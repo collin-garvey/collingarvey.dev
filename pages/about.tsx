@@ -103,8 +103,19 @@ export default function About() {
           <p>
             <strong>
               Click on the different colored circles to zoom in and out of
-              levels of specificity. Each inner-most item has a confidence
-              score, 1-10 from low condifence to high.
+              levels of specificity.
+            </strong>
+          </p>
+          <p>
+            <strong>
+              Each inner-most item is colored based on a ** Subjective
+              Confidence Score&trade; ** from low condifence (😬) to high
+              confidence (🤩).
+            </strong>
+          </p>
+          <p>
+            <strong>
+              Low confidence scores do not represent an unwillingness to learn!
             </strong>
           </p>
           <SkillsTree />
