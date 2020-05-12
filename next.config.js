@@ -34,7 +34,7 @@ module.exports = withPlugins(
     [
       optimizedImages,
       {
-        handleImages: ['jpeg', 'png', 'gif'],
+        handleImages: ['jpeg', 'png'],
         responsive: {
           sizes: [300, 650, 1200, 2000],
           placeholder: true,
