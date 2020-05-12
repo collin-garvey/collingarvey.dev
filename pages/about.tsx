@@ -127,10 +127,6 @@ export default function About() {
             practice or try something new at least a few times a week, if not
             every day.
           </p>
-          <p>
-            I'm a big proponent of spending money to accelerate learning, if one
-            is able to do so. After all, time is our most valuable resource.
-          </p>
           <p>Here's a list of things I'm learning about currently:</p>
           <ul className="columnarList">
             <li>
@@ -150,6 +146,31 @@ export default function About() {
             <li>Serverless technology</li>
             <li>
               <ExternalLink href="https://svelte.dev/">Svelte</ExternalLink>
+            </li>
+          </ul>
+          <p>
+            I'm a big proponent of spending money to accelerate learning, if one
+            is able to do so. After all, time is our most valuable resource.
+          </p>
+          <p>Here are some services I've used to help me stay sharp:</p>
+          <ul className="columnarList">
+            <li>
+              <ExternalLink href="https://egghead.io">egghead.io</ExternalLink>
+            </li>
+            <li>
+              <ExternalLink href="https://educative.io">
+                educative.io
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink href="https://testingjavascript.com">
+                testingjavascript.com
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink href="https://www.codewars.com/">
+                codewars.com
+              </ExternalLink>
             </li>
           </ul>
         </Section>
