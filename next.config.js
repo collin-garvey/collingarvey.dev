@@ -5,6 +5,7 @@ const optimizedImages = require('next-optimized-images');
 const nextConfig = {
   esModule: true,
   poweredByHeader: false,
+  compress: true,
   webpack: config => {
     config.module.rules.push({
       test: /\.md$/,
