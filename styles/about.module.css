@@ -7,7 +7,13 @@
   width: 150px;
   height: auto;
   float: left;
-  margin: 0 1rem 1rem 0;
-  border-radius: 50%;
+  margin: 0 2rem 2rem 0;
   overflow: hidden;
+  background: linear-gradient(
+    to right,
+    hsl(247, 24%, 7%) 0%,
+    rgb(122, 39, 121) 50%,
+    hsl(7, 86%, 62%) 100%
+  );
+  padding: 1px;
 }

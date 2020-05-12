@@ -1,6 +1,6 @@
 .HomeHero {
   position: relative;
-  padding: 2rem 2rem 8rem;
+  padding: 3rem 2rem 8rem;
 }
 
 .heroContent h1 {
@@ -19,7 +19,6 @@
   flex-direction: column;
   place-items: center;
   text-align: center;
-  margin: 3rem 0 0 0;
   z-index: 2;
 }
 
