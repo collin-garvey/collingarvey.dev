@@ -24,7 +24,8 @@
   margin: 1rem 0;
 }
 
-.markdown p + h2 {
+.markdown p + h2,
+.markdown ul + h2 {
   margin: 2rem 0 1rem;
 }
 

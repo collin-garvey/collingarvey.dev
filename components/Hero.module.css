@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(transparent, rgba(0, 0, 0, 1));
+  background: radial-gradient(transparent, rgba(0, 0, 0, 0.6));
   content: '';
   z-index: 2;
 }
