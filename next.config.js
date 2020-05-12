@@ -22,11 +22,6 @@ const nextConfig = {
     });
     return config;
   },
-  env: {
-    assetPrefix: process.env.CG_WEB_CLOUDFRONT_DOMAIN
-      ? `https://${process.env.CG_WEB_CLOUDFRONT_DOMAIN}`
-      : '',
-  },
 };
 
 module.exports = withPlugins(

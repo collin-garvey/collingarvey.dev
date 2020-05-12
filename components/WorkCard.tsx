@@ -13,7 +13,7 @@ interface IWorkCardProps {
 const WorkCard: React.SFC<IWorkCardProps> = props => {
   const {workObj} = props;
   const workImage = require(`../public/static/images/${workObj.mainImage.url}?resize&size=650`);
-  console.log(workImage);
+
   return (
     <div className={styles.workCard}>
       <Link href="/work/[slug]" as={`/work/${workObj.slug}`}>
