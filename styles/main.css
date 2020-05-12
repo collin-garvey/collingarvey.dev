@@ -2,6 +2,7 @@
   font-family: 'Teko';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src: url('/static/fonts/Teko-Regular.woff') format('woff');
 }
 
@@ -9,6 +10,7 @@
   font-family: 'Teko';
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src: url('/static/fonts/Teko-Bold.woff') format('woff');
 }
 
@@ -16,6 +18,7 @@
   font-family: 'Open Sans';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src: url('/static/fonts/OpenSans-Regular.woff') format('woff');
 }
 
@@ -23,6 +26,7 @@
   font-family: 'Open Sans';
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src: url('/static/fonts/OpenSans-Bold.woff') format('woff');
 }
 

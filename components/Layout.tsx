@@ -18,7 +18,7 @@ const Layout: React.SFC = props => {
         <link
           rel="icon"
           type="image/x-icon"
-          href={`${config.imagesPath}logo.svg`}
+          href={`${config.imagesPath}favicon.svg`}
         />
       </Head>
       <Header />
