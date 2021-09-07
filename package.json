@@ -59,7 +59,7 @@
     "react-three-fiber": "^4.1.1",
     "recursive-readdir": "^2.2.2",
     "remark": "^11.0.2",
-    "remark-html": "^11.0.1",
+    "remark-html": "^13.0.2",
     "responsive-loader": "^1.2.0",
     "three": "^0.116.0"
   },
